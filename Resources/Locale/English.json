@@ -1,0 +1,70 @@
+﻿{
+    "TITLE_APP": "",
+    "SLOGAN_APP": "Discover the ",
+    "COPYRIGHT_APP": "Copyright © 2017",
+    "VERSION_APP": "v.",
+    "CREDITS_APP": "Created and developed by OlivaDevelop",
+    "PRELOAD_SCREEN_GAME1": "...",
+    "PRELOAD_SCREEN_GAME2": "...",
+
+    "BUTTON_MUTLIPLAYER": "Play Online",
+    "BUTTON_SINGLEPLAYER": "Play",
+    "BUTTON_SETTINGS": "Settings",
+    "BUTTON_RANKING": "Ranking",
+    "BUTTON_EXIT": "Exit Game",
+    "BUTTON_VOLVER": "Back to menu",
+    "BUTTON_START": "Start to play",
+    "BUTTON_SIGN_IN": "Sign in",
+    "BUTTON_SIGN_UP": "Sign up",
+    "BUTTON_ACCEPT": "Accept",
+    "BUTTON_CANCEL": "Cancel",
+
+    "TEXT_BUTTON_RECOVERY_PASS": "Forgot your password? Get it here by clicking here!",
+    "TEXT_BUTTON_NEW_ACCOUNT": "You do not have an account? Create one now, it's free!",
+    "TEXT_BUTTON_TERMS": "I accept the terms and conditions",
+
+    "TITLE_SINGLE_PLAYER_SCREEN": "Get ready...",
+
+    "LABEL_MAIN_MENU": "Main menu",
+    "LABEL_CONNECTING": "Connecting...",
+    "LABEL_EXIT": "Are you sure to quit the game?",
+    "LABEL_RECOVERY_PASS": "Enter your registration email and we will send you an email to recover your password.",
+    "LABEL_LEVEL_SOUND": "Lvl. Sound",
+    "LABEL_LEVEL_MUSICA": "Lvl. Music",
+    "LABEL_LEVEL_DIFFICULT": "Difficult",
+
+    "TOOGLE_LEVEL_EASY": "Easy",
+    "TOOGLE_LEVEL_MIDDLE": "Middle",
+    "TOOGLE_LEVEL_HARD": "Hard",
+    "TOOGLE_LEVEL_EXTREME": "Extreme",
+
+    "DESCRIPT_EASY": "Begin your story in the easiest way, but do not trust or perish.",
+    "DESCRIPT_MIDDLE": "Begin your story in a more normal way, you must be cautious.",
+    "DESCRIPT_HARD": "Begin your story in the most difficult way, strive to the maximum or you will perish.",
+    "DESCRIPT_EXTREME":
+        "Begin your story in an extreme way, here the tricks will not serve you, you must show your most strategic part or you will perish in an instant.",
+    "DESCRIPT_BASE":
+        "The combat strategy is increased at each level and each time you will find it a little more complicated to move forward.{$BR$}{$BR$}Choose one of the {$VAR$} battles you must face, but choose wisely, you will not be able to rectify your decision. As a good commander, the decision will be most appropriate.",
+
+    "PLACEHOLDER_EMAIL": "Enter your email",
+    "PLACEHOLDER_USERNAME": "Enter username or email",
+    "PLACEHOLDER_USER": "Enter your username",
+    "PLACEHOLDER_PASSWORD": "Enter user password",
+    "PLACEHOLDER_R_PASSWORD": "Re enter your password",
+
+    "CONNECTING_SERVER": "Conecting to main ship...",
+
+    "INFO_USER_EXIST": "The user is correct, sign in...",
+    "INFO_NEW_USER": "The user has been created correctly",
+    "INFO_SUCCESS_EMAIL_RECOVERY": "Mail has been sent to your account. Follow the steps to recover your password.",
+    "INFO_DEVELOP_FUNCTION": "Action in development",
+
+    "ERROR_USER_NOT_EXIST": "The user does not exist or is incorrect.",
+    "ERROR_USER_EXIST": "The user or email already exists.",
+    "ERROR_USERMAIL_BAD": "Email is not correct.",
+    "ERROR_UNABLE_TO_CONNECT_SERVER": "Fail to connect main ship.",
+    "ERROR_TIMEOUT": "Timeout. Please, try again.",
+    "ERROR_PWD_NOT_EQUALS": "Passwords are not the same",
+    "ERROR_ACCEPT_TERMS": "You should accept the terms and conditions",
+    "ERROR_FORM_LOGIN_EMPTY": "Form fields are required."
+}
