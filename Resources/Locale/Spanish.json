@@ -34,8 +34,8 @@
     "LABEL_CONNECTING": "Conectando...",
     "LABEL_EXIT": "¿Seguro que deseas salir?",
     "LABEL_RECOVERY_PASS": "Introduce tu email de registro y te enviaremos un correo para recuperar la contraseña.",
-    "LABEL_LEVEL_SOUND": "Vol. Sonido",
-    "LABEL_LEVEL_MUSICA": "Vol. Musica",
+    "LABEL_LEVEL_SOUND": "Volumen del sonido",
+    "LABEL_LEVEL_MUSICA": "Volumen de la musica",
     "LABEL_LEVEL_DIFFICULT": "Dificultad",
 
     "TOOGLE_LEVEL_EASY": "Fácil",

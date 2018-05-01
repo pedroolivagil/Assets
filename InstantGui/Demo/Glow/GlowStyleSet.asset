@@ -223,7 +223,7 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 5
   - name: Button
-    show: 1
+    show: 0
     fixedSize: 0
     fixedWidth: 0
     fixedHeight: 1
@@ -503,12 +503,12 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
   - name: HorizontalSlider_Diamond
-    show: 0
+    show: 1
     fixedSize: 0
     fixedWidth: 0
     fixedHeight: 0
     fixedWidthSize: 0
-    fixedHeightSize: 0
+    fixedHeightSize: 20
     proportional: 0
     proportionalAspect: 1
     main:
@@ -582,28 +582,28 @@ MonoBehaviour:
     proportional: 0
     proportionalAspect: 1
     main:
-      enabled: 1
+      enabled: 0
       texture: {fileID: 2800000, guid: 56ba58d9375273545aa2570860bf1092, type: 3}
       textOffsetX: 0
       textOffsetY: 0
       textColor: {r: 1, g: 1, b: 1, a: 1}
       guiBorders: 0
     pointed:
-      enabled: 1
+      enabled: 0
       texture: {fileID: 2800000, guid: f9a00b40669186c498b0d9db1d97f852, type: 3}
       textOffsetX: 0
       textOffsetY: 0
       textColor: {r: 1, g: 1, b: 1, a: 1}
       guiBorders: 0
     active:
-      enabled: 1
+      enabled: 0
       texture: {fileID: 2800000, guid: 92a3d660edfa65949a94a9fab4da30ee, type: 3}
       textOffsetX: 0
       textOffsetY: 0
       textColor: {r: 1, g: 1, b: 1, a: 1}
       guiBorders: 0
     disabled:
-      enabled: 1
+      enabled: 0
       texture: {fileID: 2800000, guid: 0bba2578b04576c429f2b13888c48088, type: 3}
       textOffsetX: 0
       textOffsetY: 0
@@ -642,13 +642,83 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
+  - name: HorizontalSlider_IncrementButton
+    show: 0
+    fixedSize: 0
+    fixedWidth: 1
+    fixedHeight: 1
+    fixedWidthSize: 20
+    fixedHeightSize: 20
+    proportional: 0
+    proportionalAspect: 1
+    main:
+      enabled: 0
+      texture: {fileID: 2800000, guid: cbd0e25c219f80247b81e4f61dbff4d1, type: 3}
+      textOffsetX: 0
+      textOffsetY: 0
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      guiBorders: 0
+    pointed:
+      enabled: 0
+      texture: {fileID: 2800000, guid: eb09c4ec7bb1ab843b1a4c7072108639, type: 3}
+      textOffsetX: 0
+      textOffsetY: 0
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      guiBorders: 0
+    active:
+      enabled: 0
+      texture: {fileID: 2800000, guid: 9766750e55937154887732748b76b4b8, type: 3}
+      textOffsetX: 0
+      textOffsetY: 0
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      guiBorders: 0
+    disabled:
+      enabled: 0
+      texture: {fileID: 2800000, guid: fb0ab6d415e437d44b32398cc34b6213, type: 3}
+      textOffsetX: 0
+      textOffsetY: 0
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      guiBorders: 0
+    borders:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    blendSpeed: 2
+    font: {fileID: 0}
+    oldFont: {fileID: 0}
+    fontSize: 0
+    textAligment: 0
+    textOffsetX: 0
+    textOffsetY: 0
+    textEffect: 0
+    textEffectSize: 1
+    textEffectColor: {r: 0, g: 0, b: 0, a: 0}
+    relative:
+      left: 100
+      right: 100
+      top: 50
+      bottom: 50
+      isStyle: 0
+    offset:
+      left: 0
+      right: 20
+      top: -10
+      bottom: 10
+      isStyle: 0
+    layerOffset: 1
+    pointOffset:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
   - name: HorizontalSlider
     show: 0
     fixedSize: 0
     fixedWidth: 0
     fixedHeight: 1
     fixedWidthSize: 0
-    fixedHeightSize: 20
+    fixedHeightSize: 30
     proportional: 0
     proportionalAspect: 1
     main:
@@ -705,76 +775,6 @@ MonoBehaviour:
       right: -50
       top: -50
       bottom: -30
-      isStyle: 0
-    layerOffset: 1
-    pointOffset:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-  - name: HorizontalSlider_IncrementButton
-    show: 0
-    fixedSize: 0
-    fixedWidth: 1
-    fixedHeight: 1
-    fixedWidthSize: 20
-    fixedHeightSize: 20
-    proportional: 0
-    proportionalAspect: 1
-    main:
-      enabled: 1
-      texture: {fileID: 2800000, guid: cbd0e25c219f80247b81e4f61dbff4d1, type: 3}
-      textOffsetX: 0
-      textOffsetY: 0
-      textColor: {r: 1, g: 1, b: 1, a: 1}
-      guiBorders: 0
-    pointed:
-      enabled: 1
-      texture: {fileID: 2800000, guid: eb09c4ec7bb1ab843b1a4c7072108639, type: 3}
-      textOffsetX: 0
-      textOffsetY: 0
-      textColor: {r: 1, g: 1, b: 1, a: 1}
-      guiBorders: 0
-    active:
-      enabled: 1
-      texture: {fileID: 2800000, guid: 9766750e55937154887732748b76b4b8, type: 3}
-      textOffsetX: 0
-      textOffsetY: 0
-      textColor: {r: 1, g: 1, b: 1, a: 1}
-      guiBorders: 0
-    disabled:
-      enabled: 1
-      texture: {fileID: 2800000, guid: fb0ab6d415e437d44b32398cc34b6213, type: 3}
-      textOffsetX: 0
-      textOffsetY: 0
-      textColor: {r: 1, g: 1, b: 1, a: 1}
-      guiBorders: 0
-    borders:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    blendSpeed: 2
-    font: {fileID: 0}
-    oldFont: {fileID: 0}
-    fontSize: 0
-    textAligment: 0
-    textOffsetX: 0
-    textOffsetY: 0
-    textEffect: 0
-    textEffectSize: 1
-    textEffectColor: {r: 0, g: 0, b: 0, a: 0}
-    relative:
-      left: 100
-      right: 100
-      top: 50
-      bottom: 50
-      isStyle: 0
-    offset:
-      left: 0
-      right: 20
-      top: -10
-      bottom: 10
       isStyle: 0
     layerOffset: 1
     pointOffset:
