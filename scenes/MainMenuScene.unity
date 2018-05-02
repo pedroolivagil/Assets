@@ -490,6 +490,58 @@ GUIText:
     rgba: 4294967295
   m_PixelCorrect: 1
   m_RichText: 1
+--- !u!1 &74324698
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 74324699}
+  - component: {fileID: 74324700}
+  m_Layer: 0
+  m_Name: passWord_text0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &74324699
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 74324698}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10000.01}
+  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_Children: []
+  m_Father: {fileID: 616960619}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!132 &74324700
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 74324698}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: '*****************************************************************'
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 729, y: 620}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
+  m_Material: {fileID: 303499935}
+  m_FontSize: 30
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!1 &78491186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,7 +1529,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 72.8044
+  unpointedTime: 74.29229
   disabled: 0
   activated: 0
   pressed: 0
@@ -2111,7 +2163,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 602.2052
+  unpointedTime: 705.0501
   disabled: 0
   activated: 0
   pressed: 0
@@ -2329,6 +2381,31 @@ GUITexture:
   m_RightBorder: 40
   m_TopBorder: 25
   m_BottomBorder: 25
+--- !u!21 &303499935
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Font Material
+  m_Shader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!21 &327116336
 Material:
   serializedVersion: 6
@@ -3266,7 +3343,7 @@ GameObject:
   - component: {fileID: 595883742}
   - component: {fileID: 595883743}
   m_Layer: 0
-  m_Name: Element
+  m_Name: Divider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3328,7 +3405,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 90.72506
+  unpointedTime: 16.290165
   disabled: 0
   activated: 0
   pressed: 0
@@ -3342,10 +3419,10 @@ MonoBehaviour:
   textMaterial: {fileID: 0}
   textEffectMaterial: {fileID: 0}
   styleSet: {fileID: 11400000, guid: fa3762748a9cff6429fea97cc8bfb1ac, type: 2}
-  customStyle: 1
-  styleName: Window
+  customStyle: 0
+  styleName: Divider
   style:
-    name: Window
+    name: Divider
     show: 0
     fixedSize: 0
     fixedWidth: 0
@@ -3422,7 +3499,7 @@ MonoBehaviour:
   - {fileID: 925620039}
   childTfmsActive: 01
   deleteChildren: 0
-  guiLinkText: 1
+  guiLinkText: 0
   guiEditor: 0
   guiStyle: 1
   guiPosition: 1
@@ -3509,6 +3586,7 @@ Transform:
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children:
   - {fileID: 1578421551}
+  - {fileID: 74324699}
   m_Father: {fileID: 168110395}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3560,12 +3638,13 @@ MonoBehaviour:
   pressed: 0
   check: 0
   instant: 1
-  password: 0
-  text: 
+  password: 1
+  text: ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
   mainGuiTexture: {fileID: 1578421552}
   blendGuiTexture: {fileID: 0}
-  guiTexts: []
-  textMaterial: {fileID: 0}
+  guiTexts:
+  - {fileID: 74324700}
+  textMaterial: {fileID: 303499935}
   textEffectMaterial: {fileID: 0}
   styleSet: {fileID: 11400000, guid: fa3762748a9cff6429fea97cc8bfb1ac, type: 2}
   customStyle: 0
@@ -3583,30 +3662,30 @@ MonoBehaviour:
     main:
       enabled: 1
       texture: {fileID: 2800000, guid: 60b1436144a30634697c9e18915f81ed, type: 3}
-      textOffsetX: 0
-      textOffsetY: 0
+      textOffsetX: 5
+      textOffsetY: 5
       textColor: {r: 1, g: 1, b: 1, a: 1}
       guiBorders: 0
     pointed:
       enabled: 1
       texture: {fileID: 2800000, guid: 50709574ba0d4314794b2a80a9508ab9, type: 3}
-      textOffsetX: 0
-      textOffsetY: 0
+      textOffsetX: 5
+      textOffsetY: 5
       textColor: {r: 1, g: 1, b: 1, a: 1}
       guiBorders: 0
     active:
       enabled: 1
       texture: {fileID: 2800000, guid: 26e75b503851dcd468fabfadc30634f9, type: 3}
-      textOffsetX: 0
-      textOffsetY: 0
+      textOffsetX: 5
+      textOffsetY: 5
       textColor: {r: 1, g: 1, b: 1, a: 1}
       guiBorders: 0
     disabled:
       enabled: 1
       texture: {fileID: 2800000, guid: ec5a33dc3676c144eb233d341a46cf7b, type: 3}
-      textOffsetX: 0
-      textOffsetY: 0
-      textColor: {r: 1, g: 1, b: 1, a: 1}
+      textOffsetX: 5
+      textOffsetY: 5
+      textColor: {r: 0.8014706, g: 0.8014706, b: 0.8014706, a: 1}
       guiBorders: 0
     borders:
       m_Left: 45
@@ -3619,7 +3698,7 @@ MonoBehaviour:
     fontSize: 30
     textAligment: 1
     textOffsetX: 12
-    textOffsetY: 23
+    textOffsetY: 15
     textEffect: 0
     textEffectSize: 1
     textEffectColor: {r: 0, g: 0, b: 0, a: 0}
@@ -3641,19 +3720,20 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-  currentFont: {fileID: 0}
+  currentFont: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
   forceAlign: 0
   childElements: []
   childTfms:
   - {fileID: 1578421551}
-  childTfmsActive: 01
+  - {fileID: 74324699}
+  childTfmsActive: 0101
   deleteChildren: 0
   guiLinkText: 0
   guiEditor: 0
   guiStyle: 1
   guiPosition: 1
-  guiAttributes: 0
-  guiElementProps: 0
+  guiAttributes: 1
+  guiElementProps: 1
   guiType: 0
   useStylePlacement: 0
   cursorBlinkTime: 0.5
@@ -5213,8 +5293,8 @@ MonoBehaviour:
   onPressed:
     enableObjects: []
     disableObjects: []
-    message: 
-    messageRecievers: 2
+    message: LoginWindowPlay
+    messageRecievers: 5
     messageGameObject: {fileID: 0}
     messageInEditor: 0
     guiDraw: 1
@@ -6444,7 +6524,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 1.4348061
+  unpointedTime: 5.4164796
   disabled: 0
   activated: 0
   pressed: 0
@@ -6834,11 +6914,11 @@ MonoBehaviour:
   onPressed:
     enableObjects: []
     disableObjects: []
-    message: 
-    messageRecievers: 2
+    message: OptionButtonPlay
+    messageRecievers: 5
     messageGameObject: {fileID: 0}
     messageInEditor: 0
-    guiDraw: 0
+    guiDraw: 1
 --- !u!1 &1038103213
 GameObject:
   m_ObjectHideFlags: 0
@@ -8138,30 +8218,30 @@ MonoBehaviour:
     main:
       enabled: 1
       texture: {fileID: 2800000, guid: 60b1436144a30634697c9e18915f81ed, type: 3}
-      textOffsetX: 0
-      textOffsetY: 0
+      textOffsetX: 5
+      textOffsetY: 5
       textColor: {r: 1, g: 1, b: 1, a: 1}
       guiBorders: 0
     pointed:
       enabled: 1
       texture: {fileID: 2800000, guid: 50709574ba0d4314794b2a80a9508ab9, type: 3}
-      textOffsetX: 0
-      textOffsetY: 0
+      textOffsetX: 5
+      textOffsetY: 5
       textColor: {r: 1, g: 1, b: 1, a: 1}
       guiBorders: 0
     active:
       enabled: 1
       texture: {fileID: 2800000, guid: 26e75b503851dcd468fabfadc30634f9, type: 3}
-      textOffsetX: 0
-      textOffsetY: 0
+      textOffsetX: 5
+      textOffsetY: 5
       textColor: {r: 1, g: 1, b: 1, a: 1}
       guiBorders: 0
     disabled:
       enabled: 1
       texture: {fileID: 2800000, guid: ec5a33dc3676c144eb233d341a46cf7b, type: 3}
-      textOffsetX: 0
-      textOffsetY: 0
-      textColor: {r: 1, g: 1, b: 1, a: 1}
+      textOffsetX: 5
+      textOffsetY: 5
+      textColor: {r: 0.8014706, g: 0.8014706, b: 0.8014706, a: 1}
       guiBorders: 0
     borders:
       m_Left: 45
@@ -8174,7 +8254,7 @@ MonoBehaviour:
     fontSize: 30
     textAligment: 1
     textOffsetX: 12
-    textOffsetY: 23
+    textOffsetY: 15
     textEffect: 0
     textEffectSize: 1
     textEffectColor: {r: 0, g: 0, b: 0, a: 0}
@@ -9180,7 +9260,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 6.3814692
+  unpointedTime: 109.230354
   disabled: 0
   activated: 0
   pressed: 0
@@ -10587,7 +10667,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 608.30225
+  unpointedTime: 711.14716
   disabled: 1
   activated: 0
   pressed: 0
@@ -10983,58 +11063,6 @@ GUIText:
     rgba: 4294967295
   m_PixelCorrect: 1
   m_RichText: 1
---- !u!1001 &1782689160
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4276696626028820, guid: 30e9fb01cce812745b31b557c58e0683, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 11.128333
-      objectReference: {fileID: 0}
-    - target: {fileID: 4276696626028820, guid: 30e9fb01cce812745b31b557c58e0683, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.4638307
-      objectReference: {fileID: 0}
-    - target: {fileID: 4276696626028820, guid: 30e9fb01cce812745b31b557c58e0683, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -4.3060975
-      objectReference: {fileID: 0}
-    - target: {fileID: 4276696626028820, guid: 30e9fb01cce812745b31b557c58e0683, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4276696626028820, guid: 30e9fb01cce812745b31b557c58e0683, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4276696626028820, guid: 30e9fb01cce812745b31b557c58e0683, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4276696626028820, guid: 30e9fb01cce812745b31b557c58e0683, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4276696626028820, guid: 30e9fb01cce812745b31b557c58e0683, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114219892298495332, guid: 30e9fb01cce812745b31b557c58e0683,
-        type: 2}
-      propertyPath: viewIdField
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114219892298495332, guid: 30e9fb01cce812745b31b557c58e0683,
-        type: 2}
-      propertyPath: instantiationId
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 30e9fb01cce812745b31b557c58e0683, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1804519949
 GameObject:
   m_ObjectHideFlags: 1
@@ -11676,11 +11704,11 @@ MonoBehaviour:
   onPressed:
     enableObjects: []
     disableObjects: []
-    message: 
-    messageRecievers: 2
+    message: SignUpWindowPlay
+    messageRecievers: 5
     messageGameObject: {fileID: 0}
     messageInEditor: 0
-    guiDraw: 0
+    guiDraw: 1
 --- !u!1 &1884823319
 GameObject:
   m_ObjectHideFlags: 0
