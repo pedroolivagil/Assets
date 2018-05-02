@@ -4,7 +4,7 @@
     "COPYRIGHT_APP": "Copyright © 2018",
     "VERSION_APP": "v.",
     "CREDITS_APP": "Creado y desarrollado por OlivaDevelop",
-    
+
     "PRELOAD_SCREEN_GAME1": "Preparando oxigeno de la nave...",
     "PRELOAD_SCREEN_GAME2": "Preparando ordenador de abordo...",
     "PRELOAD_SCREEN_GAME3": "Preparando armamento pesado...",
@@ -35,8 +35,11 @@
     "LABEL_EXIT": "¿Seguro que deseas salir?",
     "LABEL_RECOVERY_PASS": "Introduce tu email de registro y te enviaremos un correo para recuperar la contraseña.",
     "LABEL_LEVEL_SOUND": "Volumen del sonido",
-    "LABEL_LEVEL_MUSICA": "Volumen de la musica",
+    "LABEL_LEVEL_MUSIC": "Volumen de la musica",
     "LABEL_LEVEL_DIFFICULT": "Dificultad",
+    "LABEL_AUTOLOGIN": "Deseo iniciar sesión automáticamente.",
+    "LABEL_RANKING_OPTION": "Deseo que mi usuario se muestre en el ranking.",
+    "LABEL_LOGIN_TITLE": "Inicia sesión",
 
     "TOOGLE_LEVEL_EASY": "Fácil",
     "TOOGLE_LEVEL_MIDDLE": "Medio",

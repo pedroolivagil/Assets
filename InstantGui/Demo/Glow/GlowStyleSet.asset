@@ -296,37 +296,37 @@ MonoBehaviour:
     show: 0
     fixedSize: 0
     fixedWidth: 0
-    fixedHeight: 0
+    fixedHeight: 1
     fixedWidthSize: 0
-    fixedHeightSize: 0
+    fixedHeightSize: 40
     proportional: 0
     proportionalAspect: 1
     main:
       enabled: 1
       texture: {fileID: 2800000, guid: a55d48a689650bd4db5fa85f996b6d3c, type: 3}
       textOffsetX: 0
-      textOffsetY: 0
+      textOffsetY: 3
       textColor: {r: 0.9117647, g: 0.95983773, b: 1, a: 1}
       guiBorders: 0
     pointed:
       enabled: 1
       texture: {fileID: 2800000, guid: 9be71c276a49dd84bbd8d84ff79d5b8f, type: 3}
       textOffsetX: 0
-      textOffsetY: 0
+      textOffsetY: 3
       textColor: {r: 1, g: 1, b: 1, a: 1}
       guiBorders: 0
     active:
       enabled: 1
       texture: {fileID: 2800000, guid: d89fd0fe5b85fec428e8da467da047c5, type: 3}
       textOffsetX: 0
-      textOffsetY: 0
+      textOffsetY: 3
       textColor: {r: 1, g: 1, b: 1, a: 1}
       guiBorders: 0
     disabled:
       enabled: 1
       texture: {fileID: 2800000, guid: bd1afe9474b7af347a48e0405363c978, type: 3}
       textOffsetX: 0
-      textOffsetY: 0
+      textOffsetY: 3
       textColor: {r: 1, g: 1, b: 1, a: 1}
       guiBorders: 0
     borders:
@@ -337,7 +337,7 @@ MonoBehaviour:
     blendSpeed: 2
     font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
     oldFont: {fileID: 0}
-    fontSize: 22
+    fontSize: 24
     textAligment: 5
     textOffsetX: 10
     textOffsetY: 0
@@ -363,7 +363,7 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
   - name: InputText
-    show: 0
+    show: 1
     fixedSize: 0
     fixedWidth: 0
     fixedHeight: 0
@@ -407,10 +407,10 @@ MonoBehaviour:
     blendSpeed: 2
     font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
     oldFont: {fileID: 0}
-    fontSize: 22
+    fontSize: 30
     textAligment: 1
     textOffsetX: 12
-    textOffsetY: 10
+    textOffsetY: 23
     textEffect: 0
     textEffectSize: 1
     textEffectColor: {r: 0, g: 0, b: 0, a: 0}
@@ -503,7 +503,7 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
   - name: HorizontalSlider_Diamond
-    show: 1
+    show: 0
     fixedSize: 0
     fixedWidth: 0
     fixedHeight: 0
