@@ -153,7 +153,7 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
   - name: Window_CloseButton
-    show: 0
+    show: 1
     fixedSize: 0
     fixedWidth: 1
     fixedHeight: 1
@@ -1545,6 +1545,76 @@ MonoBehaviour:
       right: -10
       top: 10
       bottom: -10
+      isStyle: 0
+    layerOffset: 1
+    pointOffset:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+  - name: InputTextPassword
+    show: 1
+    fixedSize: 0
+    fixedWidth: 0
+    fixedHeight: 0
+    fixedWidthSize: 0
+    fixedHeightSize: 0
+    proportional: 0
+    proportionalAspect: 1
+    main:
+      enabled: 1
+      texture: {fileID: 2800000, guid: 60b1436144a30634697c9e18915f81ed, type: 3}
+      textOffsetX: 5
+      textOffsetY: 5
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      guiBorders: 0
+    pointed:
+      enabled: 1
+      texture: {fileID: 2800000, guid: 50709574ba0d4314794b2a80a9508ab9, type: 3}
+      textOffsetX: 5
+      textOffsetY: 5
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      guiBorders: 0
+    active:
+      enabled: 1
+      texture: {fileID: 2800000, guid: 26e75b503851dcd468fabfadc30634f9, type: 3}
+      textOffsetX: 5
+      textOffsetY: 5
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      guiBorders: 0
+    disabled:
+      enabled: 1
+      texture: {fileID: 2800000, guid: ec5a33dc3676c144eb233d341a46cf7b, type: 3}
+      textOffsetX: 5
+      textOffsetY: 5
+      textColor: {r: 0.8014706, g: 0.8014706, b: 0.8014706, a: 1}
+      guiBorders: 0
+    borders:
+      m_Left: 45
+      m_Right: 45
+      m_Top: 20
+      m_Bottom: 20
+    blendSpeed: 2
+    font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    oldFont: {fileID: 0}
+    fontSize: 30
+    textAligment: 1
+    textOffsetX: 12
+    textOffsetY: 20
+    textEffect: 0
+    textEffectSize: 1
+    textEffectColor: {r: 0, g: 0, b: 0, a: 0}
+    relative:
+      left: 0
+      right: 100
+      top: 0
+      bottom: 0
+      isStyle: 0
+    offset:
+      left: 42
+      right: -40
+      top: 160
+      bottom: 200
       isStyle: 0
     layerOffset: 1
     pointOffset:

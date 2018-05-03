@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 20088705ee862c4468f1be57677971d3, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 1fd187965e85c3640b6e3414cce402cc, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -484,58 +484,6 @@ GUIText:
   m_Font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
   m_Material: {fileID: 425461178}
   m_FontSize: 22
-  m_FontStyle: 0
-  m_Color:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_PixelCorrect: 1
-  m_RichText: 1
---- !u!1 &74324698
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 74324699}
-  - component: {fileID: 74324700}
-  m_Layer: 0
-  m_Name: passWord_text0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &74324699
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 74324698}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10000.01}
-  m_LocalScale: {x: 0, y: 0, z: 1}
-  m_Children: []
-  m_Father: {fileID: 616960619}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!132 &74324700
-GUIText:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 74324698}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Text: '*****************************************************************'
-  m_Anchor: 0
-  m_Alignment: 0
-  m_PixelOffset: {x: 729, y: 620}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
-  m_Material: {fileID: 303499935}
-  m_FontSize: 30
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -1219,10 +1167,11 @@ MonoBehaviour:
   guiType: 0
   useStylePlacement: 0
   onPressed:
-    enableObjects: []
+    enableObjects:
+    - {fileID: 147010325}
     disableObjects: []
-    message: OptionButtonSettings
-    messageRecievers: 5
+    message: 
+    messageRecievers: 2
     messageGameObject: {fileID: 0}
     messageInEditor: 0
     guiDraw: 1
@@ -1529,7 +1478,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 74.29229
+  unpointedTime: 13.291039
   disabled: 0
   activated: 0
   pressed: 0
@@ -2163,7 +2112,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 705.0501
+  unpointedTime: 1002.9074
   disabled: 0
   activated: 0
   pressed: 0
@@ -2381,31 +2330,6 @@ GUITexture:
   m_RightBorder: 40
   m_TopBorder: 25
   m_BottomBorder: 25
---- !u!21 &303499935
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Font Material
-  m_Shader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!21 &327116336
 Material:
   serializedVersion: 6
@@ -3405,7 +3329,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 16.290165
+  unpointedTime: 222.62923
   disabled: 0
   activated: 0
   pressed: 0
@@ -3586,7 +3510,6 @@ Transform:
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children:
   - {fileID: 1578421551}
-  - {fileID: 74324699}
   m_Father: {fileID: 168110395}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3610,13 +3533,13 @@ MonoBehaviour:
   relative:
     left: 0
     right: 100
-    top: 0
+    top: 100
     bottom: 0
     isStyle: 0
   offset:
     left: 40
     right: -40
-    top: 170
+    top: -370
     bottom: 240
     isStyle: 0
   absolute:
@@ -3626,7 +3549,7 @@ MonoBehaviour:
     bottom: 510
     isStyle: 0
   layerOffset: 1
-  lockPosition: 0
+  lockPosition: 1
   dynamic: 1
   editable: 1
   pointed: 0
@@ -3639,18 +3562,17 @@ MonoBehaviour:
   check: 0
   instant: 1
   password: 1
-  text: ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+  text: 
   mainGuiTexture: {fileID: 1578421552}
   blendGuiTexture: {fileID: 0}
-  guiTexts:
-  - {fileID: 74324700}
-  textMaterial: {fileID: 303499935}
+  guiTexts: []
+  textMaterial: {fileID: 980028270}
   textEffectMaterial: {fileID: 0}
   styleSet: {fileID: 11400000, guid: fa3762748a9cff6429fea97cc8bfb1ac, type: 2}
   customStyle: 0
-  styleName: InputText
+  styleName: InputTextPassword
   style:
-    name: InputText
+    name: InputTextPassword
     show: 1
     fixedSize: 0
     fixedWidth: 0
@@ -3693,12 +3615,12 @@ MonoBehaviour:
       m_Top: 20
       m_Bottom: 20
     blendSpeed: 2
-    font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
+    font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     oldFont: {fileID: 0}
     fontSize: 30
     textAligment: 1
     textOffsetX: 12
-    textOffsetY: 15
+    textOffsetY: 20
     textEffect: 0
     textEffectSize: 1
     textEffectColor: {r: 0, g: 0, b: 0, a: 0}
@@ -3720,13 +3642,12 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-  currentFont: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
+  currentFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   forceAlign: 0
   childElements: []
   childTfms:
   - {fileID: 1578421551}
-  - {fileID: 74324699}
-  childTfmsActive: 0101
+  childTfmsActive: 01
   deleteChildren: 0
   guiLinkText: 0
   guiEditor: 0
@@ -4472,8 +4393,8 @@ MonoBehaviour:
   guiLinkText: 1
   guiEditor: 0
   guiStyle: 1
-  guiPosition: 0
-  guiAttributes: 0
+  guiPosition: 1
+  guiAttributes: 1
   guiElementProps: 0
   guiType: 0
   useStylePlacement: 1
@@ -6450,6 +6371,31 @@ GUITexture:
   m_RightBorder: 8
   m_TopBorder: 8
   m_BottomBorder: 8
+--- !u!21 &980028270
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Font Material
+  m_Shader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 10103, guid: 0000000000000000e000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1002843210
 GameObject:
   m_ObjectHideFlags: 0
@@ -6465,7 +6411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1002843211
 Transform:
   m_ObjectHideFlags: 0
@@ -6524,7 +6470,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 5.4164796
+  unpointedTime: 7.223104
   disabled: 0
   activated: 0
   pressed: 0
@@ -6623,8 +6569,8 @@ MonoBehaviour:
   deleteChildren: 0
   guiLinkText: 0
   guiEditor: 0
-  guiStyle: 1
-  guiPosition: 1
+  guiStyle: 0
+  guiPosition: 0
   guiAttributes: 0
   guiElementProps: 0
   guiType: 0
@@ -6912,10 +6858,11 @@ MonoBehaviour:
   guiType: 0
   useStylePlacement: 0
   onPressed:
-    enableObjects: []
+    enableObjects:
+    - {fileID: 1002843210}
     disableObjects: []
-    message: OptionButtonPlay
-    messageRecievers: 5
+    message: 
+    messageRecievers: 2
     messageGameObject: {fileID: 0}
     messageInEditor: 0
     guiDraw: 1
@@ -8167,13 +8114,13 @@ MonoBehaviour:
   relative:
     left: 0
     right: 100
-    top: 0
+    top: 99
     bottom: 0
     isStyle: 0
   offset:
     left: 42
     right: -40
-    top: 90
+    top: -445
     bottom: 160
     isStyle: 0
   absolute:
@@ -8183,7 +8130,7 @@ MonoBehaviour:
     bottom: 430
     isStyle: 0
   layerOffset: 1
-  lockPosition: 0
+  lockPosition: 1
   dynamic: 1
   editable: 1
   pointed: 0
@@ -8288,7 +8235,7 @@ MonoBehaviour:
   guiStyle: 1
   guiPosition: 1
   guiAttributes: 0
-  guiElementProps: 0
+  guiElementProps: 1
   guiType: 0
   useStylePlacement: 0
   cursorBlinkTime: 0.5
@@ -8991,17 +8938,18 @@ MonoBehaviour:
   deleteChildren: 0
   guiLinkText: 0
   guiEditor: 0
-  guiStyle: 1
-  guiPosition: 1
+  guiStyle: 0
+  guiPosition: 0
   guiAttributes: 1
   guiElementProps: 0
   guiType: 0
   useStylePlacement: 0
   onPressed:
-    enableObjects: []
+    enableObjects:
+    - {fileID: 1756871917}
     disableObjects: []
-    message: OptionButtonExit
-    messageRecievers: 5
+    message: 
+    messageRecievers: 2
     messageGameObject: {fileID: 0}
     messageInEditor: 0
     guiDraw: 1
@@ -9260,7 +9208,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 109.230354
+  unpointedTime: 4.772688
   disabled: 0
   activated: 0
   pressed: 0
@@ -9351,13 +9299,12 @@ MonoBehaviour:
   forceAlign: 0
   childElements:
   - {fileID: 190083093}
-  - {fileID: 1002843212}
   childTfms:
   - {fileID: 190083092}
   - {fileID: 1756871918}
   - {fileID: 147010326}
   - {fileID: 1002843211}
-  childTfmsActive: 01000001
+  childTfmsActive: 01000000
   deleteChildren: 0
   guiLinkText: 1
   guiEditor: 0
@@ -10588,8 +10535,9 @@ MonoBehaviour:
   useStylePlacement: 0
   onPressed:
     enableObjects: []
-    disableObjects: []
-    message: DialogCancelExit
+    disableObjects:
+    - {fileID: 1756871917}
+    message: 
     messageRecievers: 5
     messageGameObject: {fileID: 0}
     messageInEditor: 0
@@ -10667,7 +10615,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 711.14716
+  unpointedTime: 1009.00446
   disabled: 1
   activated: 0
   pressed: 0
@@ -10778,7 +10726,7 @@ MonoBehaviour:
     messageRecievers: 2
     messageGameObject: {fileID: 0}
     messageInEditor: 0
-    guiDraw: 0
+    guiDraw: 1
 --- !u!1 &1756871917
 GameObject:
   m_ObjectHideFlags: 0
@@ -11518,7 +11466,8 @@ MonoBehaviour:
   useStylePlacement: 0
   onPressed:
     enableObjects: []
-    disableObjects: []
+    disableObjects:
+    - {fileID: 147010325}
     message: CancelWindowSettings
     messageRecievers: 5
     messageGameObject: {fileID: 0}
