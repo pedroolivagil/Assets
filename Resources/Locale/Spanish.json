@@ -17,7 +17,7 @@
     "BUTTON_SETTINGS": "Configuración",
     "BUTTON_RANKING": "Clasificación",
     "BUTTON_EXIT": "Salir",
-    "BUTTON_VOLVER": "Volver al menú",
+    "BUTTON_BACK": "Volver al menú",
     "BUTTON_START": "Empezar a jugar",
     "BUTTON_SIGN_IN": "Entrar",
     "BUTTON_SIGN_UP": "Regístrate",
@@ -25,10 +25,8 @@
     "BUTTON_CANCEL": "Cancelar",
 
     "TEXT_BUTTON_RECOVERY_PASS": "Has olvidado la contraseña? Recupérala pulsando aquí!",
-    "TEXT_BUTTON_NEW_ACCOUNT": "No tienes cuenta? Create una ahora, es gratis!",
+    "TEXT_BUTTON_NEW_ACCOUNT": "No tienes cuenta? Créate una ahora, es gratis!",
     "TEXT_BUTTON_TERMS": "Acepto los términos y condiciones",
-
-    "TITLE_SINGLE_PLAYER_SCREEN": "Prepárate...",
 
     "LABEL_MAIN_MENU": "Menú principal",
     "LABEL_CONNECTING": "Conectando...",
@@ -40,6 +38,7 @@
     "LABEL_AUTOLOGIN": "Deseo iniciar sesión automáticamente.",
     "LABEL_RANKING_OPTION": "Deseo que mi usuario se muestre en el ranking.",
     "LABEL_LOGIN_TITLE": "Inicia sesión",
+    "LABEL_SERVER_LIST": "Seleccione una galaxia...",
 
     "TOOGLE_LEVEL_EASY": "Fácil",
     "TOOGLE_LEVEL_MIDDLE": "Medio",
