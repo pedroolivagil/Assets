@@ -1,4 +1,5 @@
 ﻿using Photon;
+using Scenes;
 
 namespace Game{
     public class NetworkManager : MonoBehaviour{
@@ -14,7 +15,7 @@ namespace Game{
         }
 
         void OnConnectedToMaster(){
-            PhotonNetwork.JoinOrCreateRoom("Galaxy 1", new RoomOptions{MaxPlayers = 10}, null);
+            PhotonNetwork.JoinOrCreateRoom(StaticClass.InfoObject.ToString(), new RoomOptions{MaxPlayers = 10}, null);
         }
 
         void OnJoinedRoom(){
