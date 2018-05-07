@@ -6,19 +6,11 @@ namespace Scenes{
         public Material[] MaterialSkyboxes;
 
         private bool _listGalaxyLoaded = false;
-        private InstantGuiElement _panelGalaxy;
 
         void Start(){
-            _panelGalaxy = GameManager.GetGuiComponentWithName("panelGalaxy");
             UpdateSkyBox();
         }
 
-        void OnGUI(){
-            if (!_listGalaxyLoaded){
-                WindowGalaxy();
-                _listGalaxyLoaded = true;
-            }
-        }
 
         private void UpdateSkyBox(){
             Material tmp = MaterialSkyboxes[GameManager.RandomBetween(0, MaterialSkyboxes.Length - 1)];
@@ -41,7 +33,6 @@ namespace Scenes{
         }
 
 // Ventana de login
-
         void SignUpWindowPlay(){
             Debug.Log("Btn SignUp has pressed");
         }
@@ -53,15 +44,15 @@ namespace Scenes{
             Debug.Log("Data -> " + userName.text + " : " + passWord.text);
         }
 
-        void WindowGalaxy(){
-            InstantGuiWindow galaxy0 = GameManager.GetGuiComponentWithName("galaxy0") as InstantGuiWindow;
-            InstantGuiList lista0 = galaxy0.GetComponentInChildren<InstantGuiList>();
-            foreach (InstantGuiElement list in lista0.elements){
-                    lista0.a
-                        
-                        
-                }
-            lista0.labels[]
+// Ventana de servidores
+        void SelectServer(Object[] args){
+            if (args != null){
+                Object galaxy = args[0];
+                Object system = args[1];
+                Debug.Log("Galaxia: " + galaxy + "; Sistema: " + system);
+            } else{
+                Debug.Log("Error");
+            }
         }
     }
 }
