@@ -2927,7 +2927,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 25.39137
+  unpointedTime: 1.6866667
   disabled: 0
   activated: 0
   pressed: 0
@@ -16423,7 +16423,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 2292.68
+  unpointedTime: 2300.3088
   disabled: 0
   activated: 0
   pressed: 0
@@ -16818,7 +16818,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 13.974145
+  unpointedTime: 3.0199997
   disabled: 0
   activated: 0
   pressed: 0
@@ -17922,11 +17922,11 @@ MonoBehaviour:
   onPressed:
     enableObjects: []
     disableObjects: []
-    message: 
-    messageRecievers: 2
+    message: StartGame
+    messageRecievers: 5
     messageGameObject: {fileID: 0}
     messageInEditor: 0
-    guiDraw: 0
+    guiDraw: 1
 --- !u!1 &1578421550
 GameObject:
   m_ObjectHideFlags: 1
@@ -20423,7 +20423,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 1176.2648
+  unpointedTime: 1183.8964
   disabled: 1
   activated: 0
   pressed: 0

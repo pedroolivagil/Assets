@@ -15,7 +15,8 @@ namespace Game{
         }
 
         void OnConnectedToMaster(){
-            PhotonNetwork.JoinOrCreateRoom(StaticClass.InfoObject.ToString(), new RoomOptions{MaxPlayers = 10}, null);
+            string room = (StaticClass.InfoObject != null) ? StaticClass.InfoObject.ToString() : "Marnintong-52";
+            PhotonNetwork.JoinOrCreateRoom(room, new RoomOptions{MaxPlayers = 10}, null);
         }
 
         void OnJoinedRoom(){
