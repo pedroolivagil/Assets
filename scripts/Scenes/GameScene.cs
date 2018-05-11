@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class GameScene : MonoBehaviour{
     // Use this for initialization
@@ -7,4 +8,5 @@ public class GameScene : MonoBehaviour{
     void Start(){
         Instantiate(PrefabNetwork);
     }
+
 }

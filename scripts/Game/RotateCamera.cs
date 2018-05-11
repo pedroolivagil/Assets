@@ -2,11 +2,16 @@
 
 namespace Scenes{
     public class RotateCamera : MonoBehaviour{
+        public float Aspect;
         private int _speed;
         private Quaternion _q;
 
+        //        private Camera _camera;
+
         void Start(){
             _speed = GameManager.RandomBetween(1, 5);
+//            _camera = GetComponent<Camera>();
+//            _camera.aspect = Aspect;
         }
 
         void FixedUpdate(){
