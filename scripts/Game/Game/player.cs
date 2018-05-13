@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 
 public class player : MonoBehaviour{
-    public Camera Camera;
+    private Camera _camera;
     public float Speed = 3.0f;
     public float Rotate = 100f;
 
     private Vector3 offset; //Private variable to store the offset distance between the player and camera
 
     void Start(){
+        _camera = FindObjectOfType<Camera>();
         //Calculate and store the offset value by getting the distance between the player's position and camera's position.
-        offset = Camera.transform.position - transform.position;
+        offset = _camera.transform.position - transform.position;
     }
 
     void Update(){
@@ -23,7 +24,7 @@ public class player : MonoBehaviour{
 
     private void UpdateCamera(){
         // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-        Camera.transform.position = transform.position + offset;
+        _camera.transform.position = transform.position + offset;
     }
 
     private void Movement(){
