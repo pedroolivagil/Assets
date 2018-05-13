@@ -1,9 +1,11 @@
-﻿using Photon;
-using Scenes;
+﻿using Scenes;
+using UnityEngine;
 
 namespace Game{
-    public class NetworkManager : MonoBehaviour{
+    public class NetworkManager : Photon.MonoBehaviour{
         public string Version;
+        public Camera Camera;
+        public Transform[] Positions;
 
         void Start(){
             DontDestroyOnLoad(gameObject);
@@ -20,7 +22,8 @@ namespace Game{
         }
 
         void OnJoinedRoom(){
-//        PhotonNetwork.Instantiate("Sphere", transform.position, transform.rotation, 0);
+            Transform position = Positions[GameManager.RandomBetween(0, Positions.Length - 1)];
+            PhotonNetwork.Instantiate("Actors/Player", position.position, Quaternion.identity, 0);
         }
     }
 }
