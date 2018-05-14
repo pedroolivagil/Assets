@@ -343,7 +343,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 13.717921
+  unpointedTime: 1.2389655
   disabled: 0
   activated: 0
   pressed: 0
@@ -629,7 +629,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 5074.7646
+  unpointedTime: 5118.595
   disabled: 0
   activated: 0
   pressed: 0
@@ -813,7 +813,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 7732.4614
+  unpointedTime: 7776.292
   disabled: 0
   activated: 0
   pressed: 0
@@ -1113,7 +1113,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 6273.773
+  unpointedTime: 6317.6035
   disabled: 0
   activated: 0
   pressed: 0
@@ -1386,7 +1386,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 3347.331
+  unpointedTime: 3391.1506
   disabled: 0
   activated: 0
   pressed: 0
@@ -1824,7 +1824,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 9860.2705
+  unpointedTime: 9904.07
   disabled: 0
   activated: 0
   pressed: 0
@@ -2187,7 +2187,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 5.7765326
+  unpointedTime: 49.600006
   disabled: 0
   activated: 0
   pressed: 0
@@ -2684,7 +2684,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 8317.271
+  unpointedTime: 8361.071
   disabled: 0
   activated: 0
   pressed: 0
