@@ -1,4 +1,5 @@
-﻿﻿using UnityEngine;
+﻿using Game.Game;
+using UnityEngine;
 
 public class player : Photon.MonoBehaviour{
     private Camera _camera;
@@ -36,7 +37,10 @@ public class player : Photon.MonoBehaviour{
 
     private void Shoot(){
         if (Input.GetButtonDown("Jump")){
-            PhotonNetwork.Instantiate("Actors/Ammo", transform.position, transform.rotation, 0);
+            Canon[] canons = gameObject.GetComponentsInChildren<Canon>();
+            foreach (Canon canon in canons){
+                PhotonNetwork.Instantiate("Actors/Ammo", canon.transform.position, canon.transform.rotation, 0);
+            }
         }
     }
 }

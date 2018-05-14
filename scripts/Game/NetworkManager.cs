@@ -23,7 +23,7 @@ namespace Game{
 
         void OnJoinedRoom(){
             Transform position = Positions[GameManager.RandomBetween(0, Positions.Length - 1)];
-            PhotonNetwork.Instantiate("Actors/Players/PlayerOrange", position.position, Quaternion.identity, 0);
+            PhotonNetwork.Instantiate("Actors/Players/PlayerBlue", position.position, Quaternion.identity, 0);
         }
     }
 }
