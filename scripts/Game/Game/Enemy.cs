@@ -6,6 +6,7 @@ namespace Game.Game{
         private Transform _targetPlayer;
         private player _player;
         public int Health = 5;
+        public bool ShowHealthBar = true;
 
         void Update(){
             if (_player == null){
