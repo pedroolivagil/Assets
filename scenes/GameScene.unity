@@ -275,6 +275,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4214054245276572, guid: 46514fb1d68cb3d4fa11bfb0c5a12575, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46514fb1d68cb3d4fa11bfb0c5a12575, type: 2}
   m_IsPrefabParent: 0
@@ -385,7 +389,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 2.454953
+  unpointedTime: 15.50361
   disabled: 0
   activated: 0
   pressed: 0
@@ -671,7 +675,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 7875.764
+  unpointedTime: 16.963617
   disabled: 0
   activated: 0
   pressed: 0
@@ -855,7 +859,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 10532.505
+  unpointedTime: 10585.726
   disabled: 0
   activated: 0
   pressed: 0
@@ -1075,6 +1079,17 @@ Prefab:
       propertyPath: Positions.Array.data[0]
       value: 
       objectReference: {fileID: 1229149052}
+    - target: {fileID: 114630718342987070, guid: 30e9fb01cce812745b31b557c58e0683,
+        type: 2}
+      propertyPath: GroupInstance
+      value: 
+      objectReference: {fileID: 1855797068}
+    - target: {fileID: 114667982565560482, guid: 30e9fb01cce812745b31b557c58e0683,
+        type: 2}
+      propertyPath: Skin
+      value: 
+      objectReference: {fileID: 11400000, guid: 798b8fafc1a9fe74cae8837a57ccae37,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30e9fb01cce812745b31b557c58e0683, type: 2}
   m_IsPrefabParent: 0
@@ -1155,7 +1170,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 2034.3433
+  unpointedTime: 2087.6025
   disabled: 0
   activated: 0
   pressed: 0
@@ -1428,7 +1443,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 1140.3212
+  unpointedTime: 24.46966
   disabled: 0
   activated: 0
   pressed: 0
@@ -1849,7 +1864,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 12660.081
+  unpointedTime: 12713.302
   disabled: 0
   activated: 0
   pressed: 0
@@ -2239,7 +2254,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 2806.3276
+  unpointedTime: 2859.5835
   disabled: 0
   activated: 0
   pressed: 0
@@ -2735,7 +2750,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 11117.082
+  unpointedTime: 11170.303
   disabled: 0
   activated: 0
   pressed: 0

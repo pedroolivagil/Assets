@@ -123,23 +123,6 @@ public class GameManager : MonoBehaviour{
         return retorno;
     }
 
-    public static GameObject GetGameObjectWithName(string name){
-        return GetGameObjectWithName(name, null);
-    }
-
-    public static GameObject GetGameObjectWithName(string name, string tag){
-        GameObject retorno = null;
-        GameObject gui = FindObjectOfType<GameObject>();
-        GameObject[] elements = gui.GetComponentsInChildren<GameObject>(true);
-        foreach (GameObject element in elements){
-            if (element.name.Equals(name) || (tag != null && element.CompareTag(tag))){
-                retorno = element;
-                break;
-            }
-        }
-        return retorno;
-    }
-
     public static void MoveInHierarchy(GameObject gameObject){
         gameObject.transform.SetAsLastSibling();
     }
@@ -194,5 +177,12 @@ public class GameManager : MonoBehaviour{
 
     public static double Round(double num, int decimals){
         return Math.Round(num, decimals);
+    }
+
+
+    public static GameObject Instantiate(String prefabUri, Transform transform, GameObject groupInstance){
+        GameObject obj = PhotonNetwork.Instantiate(prefabUri, transform.position, transform.rotation, 0);
+        obj.transform.parent = groupInstance.transform;
+        return obj;
     }
 }

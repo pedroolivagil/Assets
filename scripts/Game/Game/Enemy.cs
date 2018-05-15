@@ -7,11 +7,7 @@ namespace Game.Game{
         private player _player;
         public int Health = 5;
         public bool ShowHealthBar = true;
-        public GameObject healthBar;
-
-        void Start(){
-            healthBar = GameManager.GetGameObjectWithName("healthBar");
-        }
+        public GameObject HealthBar;
 
         void Update(){
             if (_player == null){
@@ -24,10 +20,14 @@ namespace Game.Game{
 
         void OnParticleCollision(GameObject other){
             DestroyObject(other);
-            Health--;
+            UpdateHealth();
             if (Health == 0){
                 DestroyObject(gameObject, 0.2f);
             }
+        }
+
+        private void UpdateHealth(){
+            Health--;
         }
     }
 }

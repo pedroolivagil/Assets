@@ -6,6 +6,7 @@ namespace Game{
         public string Version;
         public Camera Camera;
         public Transform[] Positions;
+        public GameObject GroupInstance;
 
         void Start(){
             DontDestroyOnLoad(gameObject);
@@ -23,7 +24,9 @@ namespace Game{
 
         void OnJoinedRoom(){
             Transform position = Positions[GameManager.RandomBetween(0, Positions.Length - 1)];
-            PhotonNetwork.Instantiate("Actors/Players/PlayerBlue", position.position, Quaternion.identity, 0);
+//            GameObject obj = PhotonNetwork.Instantiate("Actors/Players/PlayerBlue", position.position, Quaternion.identity, 0);
+//            obj.transform.parent = GroupInstance.transform;
+            GameManager.Instantiate("Actors/Players/PlayerBlue", position, GroupInstance);
         }
     }
 }

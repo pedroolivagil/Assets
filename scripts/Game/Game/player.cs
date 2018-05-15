@@ -39,7 +39,7 @@ public class player : Photon.MonoBehaviour{
         if (Input.GetButtonDown("Jump")){
             Canon[] canons = gameObject.GetComponentsInChildren<Canon>();
             foreach (Canon canon in canons){
-                PhotonNetwork.Instantiate("Actors/Ammo", canon.transform.position, canon.transform.rotation, 0);
+                GameManager.Instantiate("Actors/Ammo", canon.transform, transform.parent.gameObject);
             }
         }
     }

@@ -199,6 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 5
   ShowHealthBar: 1
+  HealthBar: {fileID: 1605786396416940}
 --- !u!198 &198936085717467892
 ParticleSystem:
   m_ObjectHideFlags: 1
