@@ -10,12 +10,6 @@ namespace Game.Game{
             DestroyObject(gameObject, TimeToDelete);
         }
 
-        void OnCollisionEnter2D(Collision2D other){
-            Debug.Log("colision enter");
-            if (other.gameObject.CompareTag("Enemy")){
-                Debug.Log("colision enter with Enemy");
-                DestroyObject(gameObject, 0.2f);
-            }
-        }
+        
     }
 }

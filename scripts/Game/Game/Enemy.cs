@@ -5,17 +5,22 @@ namespace Game.Game{
     public class Enemy : MonoBehaviour{
         private Transform _targetPlayer;
         private player _player;
+        public int Health = 5;
 
-        // Use this for initialization
-        void Start(){ }
-
-        // Update is called once per frame
         void Update(){
             if (_player == null){
                 _player = FindObjectOfType<player>();
                 if (_player != null){
                     _targetPlayer = _player.transform;
                 }
+            }
+        }
+
+        void OnParticleCollision(GameObject other){
+            DestroyObject(other);
+            Health--;
+            if (Health == 0){
+                DestroyObject(gameObject, 0.2f);
             }
         }
     }
