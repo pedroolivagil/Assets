@@ -7,6 +7,11 @@ namespace Game.Game{
         private player _player;
         public int Health = 5;
         public bool ShowHealthBar = true;
+        public GameObject healthBar;
+
+        void Start(){
+            healthBar = GameManager.GetGameObjectWithName("healthBar");
+        }
 
         void Update(){
             if (_player == null){

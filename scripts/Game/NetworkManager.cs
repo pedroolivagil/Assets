@@ -1,4 +1,4 @@
-﻿﻿using Scenes;
+﻿using Scenes;
 using UnityEngine;
 
 namespace Game{
