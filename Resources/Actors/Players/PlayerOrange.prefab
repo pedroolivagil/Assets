@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 65523400876707538}
   - component: {fileID: 54961011033328680}
   - component: {fileID: 114203442394873396}
+  - component: {fileID: 114713144043827544}
   m_Layer: 0
   m_Name: PlayerOrange
   m_TagString: Player
@@ -308,6 +309,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208daaa43a064964ab78fed21c8b7c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114713144043827544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1943488185123630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609dd8b9c1d444c48947f78f41c216a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Energy: 50
+  Shield: 1
 --- !u!198 &198218763739349388
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3804,7 +3818,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a6e2ddc91f066741a4e4ee44e5b4ed0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.99, y: 0.75}

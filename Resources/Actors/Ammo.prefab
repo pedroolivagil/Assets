@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 199805621402893364}
   - component: {fileID: 76040728468416702}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Shoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,7 +184,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1417524855
+  randomSeed: 477210355
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2536,7 +2536,7 @@ ParticleSystem:
     serializedVersion: 3
     type: 1
     collisionMode: 0
-    colliderForce: 1
+    colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1

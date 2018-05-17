@@ -5,9 +5,14 @@ namespace Game.Game{
     public class Enemy : MonoBehaviour{
         private Transform _targetPlayer;
         private player _player;
-        public int Health = 5;
         public bool ShowHealthBar = true;
-        public GameObject HealthBar;
+
+        private Health _healthBar;
+
+        void Start(){
+            _healthBar = gameObject.GetComponentInChildren<Health>();
+            _healthBar.gameObject.SetActive(ShowHealthBar);
+        }
 
         void Update(){
             if (_player == null){
@@ -17,17 +22,21 @@ namespace Game.Game{
                 }
             }
         }
-
-        void OnParticleCollision(GameObject other){
-            DestroyObject(other);
-            UpdateHealth();
-            if (Health == 0){
-                DestroyObject(gameObject, 0.2f);
-            }
-        }
-
-        private void UpdateHealth(){
-            Health--;
-        }
+//
+//        void OnParticleCollision(GameObject other){
+//            DestroyObject(other);
+//            int safeLength = GetComponent<ParticleSystem>().safeCollisionEventSize;
+//            if (collisionEvents.Length < safeLength)
+//                collisionEvents = new ParticleSystem.CollisionEvent[safeLength];
+//            int numCollisionEvents = particleSystem.GetCollisionEvents(other, collisionEvents);
+//            int i = 0;
+//            while (i < numCollisionEvents) {
+//                Vector3 collisionHitLoc = collisionEvents[i].intersection;
+//                myExplosion = Instantiate (prefabExplosion, collisionHitLoc, Quaternion.identity) as GameObject;
+//                i++;
+//            }
+//            GameManager.Instantiate("Actors/Effects/ExplosionMini", other.transform, null);   
+//            _healthBar.Hit(1, gameObject);
+//        }
     }
 }

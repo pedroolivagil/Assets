@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 65808066313500804}
   - component: {fileID: 65821162758193260}
   - component: {fileID: 114779799152527358}
+  - component: {fileID: 114632806067408016}
   m_Layer: 0
   m_Name: PlayerGreen
   m_TagString: Player
@@ -271,6 +272,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208daaa43a064964ab78fed21c8b7c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114632806067408016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1407440094954672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609dd8b9c1d444c48947f78f41c216a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Energy: 50
+  Shield: 1
 --- !u!114 &114687610238809502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3804,7 +3818,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 848fba1bbcb58064bb0dbab689866180, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.99, y: 0.75}

@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 65578287778854408}
   - component: {fileID: 65107918535907844}
   - component: {fileID: 114296071106359768}
-  - component: {fileID: 114821674863029946}
+  - component: {fileID: 114265090724857864}
   m_Layer: 0
   m_Name: PlayerRed
   m_TagString: Player
@@ -258,6 +258,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208daaa43a064964ab78fed21c8b7c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114265090724857864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470719977461112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609dd8b9c1d444c48947f78f41c216a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Energy: 50
+  Shield: 1
 --- !u!114 &114296071106359768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -298,18 +311,6 @@ MonoBehaviour:
   Speed: 2
   Rotate: 100
   ZoomCamera: -10
---- !u!114 &114821674863029946
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1470719977461112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2668418d0a8c6804facdeca6e5fc6d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Prefab: {fileID: 0}
 --- !u!114 &114915114919474366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3817,7 +3818,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 995f76b0000ef444897ef9be9560a130, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.99, y: 0.75}
