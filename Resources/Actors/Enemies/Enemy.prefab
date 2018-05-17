@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 65561264298182074}
   - component: {fileID: 65639780348769804}
   - component: {fileID: 65375297755126648}
+  - component: {fileID: 114490939611100820}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -145,7 +146,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -187,6 +188,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09512162, y: 0.43377286, z: 0.2}
   m_Center: {x: -0.4229213, y: 0.019476652, z: 0}
+--- !u!114 &114490939611100820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1210786551198176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dab1d000677f7d4a853879956da5e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114523508878266822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,6 +211,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowHealthBar: 1
+  Speed: 1
+  Rotate: 100
+  PlayerDetected: 0
 --- !u!114 &114639997282325136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3708,7 +3723,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 715d7760a7f56084a83aa356da80d1d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.97, y: 0.84}

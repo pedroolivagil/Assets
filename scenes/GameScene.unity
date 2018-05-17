@@ -343,7 +343,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 7.125505
+  unpointedTime: 2.2143044
   disabled: 0
   activated: 0
   pressed: 0
@@ -629,7 +629,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 1054.6451
+  unpointedTime: 1325.194
   disabled: 0
   activated: 0
   pressed: 0
@@ -813,7 +813,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 11623.127
+  unpointedTime: 11893.56
   disabled: 0
   activated: 0
   pressed: 0
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 3125.461
+  unpointedTime: 3395.9858
   disabled: 0
   activated: 0
   pressed: 0
@@ -1226,22 +1226,6 @@ MonoBehaviour:
   guiElementProps: 0
   guiType: 0
   useStylePlacement: 0
---- !u!1 &683654249 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1210786551198176, guid: 46514fb1d68cb3d4fa11bfb0c5a12575,
-    type: 2}
-  m_PrefabInternal: {fileID: 1666657241}
---- !u!114 &683654250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 683654249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dab1d000677f7d4a853879956da5e15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &748651838
 GameObject:
   m_ObjectHideFlags: 1
@@ -1413,7 +1397,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 509.05295
+  unpointedTime: 779.60254
   disabled: 0
   activated: 0
   pressed: 0
@@ -1834,7 +1818,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 13750.703
+  unpointedTime: 14021.136
   disabled: 0
   activated: 0
   pressed: 0
@@ -2266,7 +2250,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 3897.442
+  unpointedTime: 4167.9854
   disabled: 0
   activated: 0
   pressed: 0
@@ -2762,7 +2746,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 12207.704
+  unpointedTime: 12478.137
   disabled: 0
   activated: 0
   pressed: 0

@@ -12,12 +12,25 @@ namespace Game.Game{
             _collisionEvents = new List<ParticleCollisionEvent>();
         }
 
+        void OnTriggerEnter(Collider other){
+            Debug.Log("TriggerEnter");
+        }
+
+
         void OnParticleCollision(GameObject other){
             ParticleSystem partSyst = other.GetComponent<ParticleSystem>();
-            partSyst.GetCollisionEvents(other, _collisionEvents);
-            Transform collisionHitLoc = _collisionEvents[0].colliderComponent.transform;
-            Debug.Log("Position: " + collisionHitLoc);
-            GameManager.Instantiate("Actors/Effects/ExplosionMini", collisionHitLoc, null);
+            int numCollisionEvents = partSyst.GetCollisionEvents(gameObject, _collisionEvents);
+            Debug.Log("Collisions: " + numCollisionEvents);
+            int i = 0;
+            while (i < numCollisionEvents){
+                var collisionHitLoc = _collisionEvents[0].colliderComponent;
+                if (collisionHitLoc != null){
+                    Vector3 position = new Vector3(collisionHitLoc.transform.position.x,
+                        collisionHitLoc.transform.position.y, -2);
+                    GameManager.Instantiate("Actors/Effects/ExplosionMini", position, Quaternion.identity, null);
+                }
+                i++;
+            }
             DestroyObject(other);
             _healthBar.Hit(1, gameObject);
         }
