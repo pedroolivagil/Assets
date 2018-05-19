@@ -28,11 +28,13 @@ public class player : Photon.MonoBehaviour{
     }
 
     private void Movement(){
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * Speed;
-        var y = Time.deltaTime * Speed;
-        Vector3 movement = new Vector3(0, 0, x * -1);
-        transform.Rotate(movement, Time.deltaTime * Speed * Rotate);
-        transform.Translate(x, y, 0);
+        if (Speed > 0){
+            var x = Input.GetAxis("Horizontal") * Time.deltaTime * Speed;
+            var y = Time.deltaTime * Speed;
+            Vector3 movement = new Vector3(0, 0, x * -1);
+            transform.Rotate(movement, Time.deltaTime * Speed * Rotate);
+            transform.Translate(x, y, 0);
+        }
     }
 
     private void Shoot(){
