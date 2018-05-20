@@ -6,10 +6,11 @@ public class player : Photon.MonoBehaviour{
     public float Speed = 3.0f;
     public float Rotate = 100f;
     public float ZoomCamera = -15f;
+    private Canon[] _canons;
 
     void Start(){
         _camera = FindObjectOfType<Camera>();
-        //Calculate and store the offset value by getting the distance between the player's position and camera's position.
+        _canons = gameObject.GetComponentsInChildren<Canon>();
     }
 
     void Update(){
@@ -39,8 +40,7 @@ public class player : Photon.MonoBehaviour{
 
     private void Shoot(){
         if (Input.GetButtonDown("Jump")){
-            Canon[] canons = gameObject.GetComponentsInChildren<Canon>();
-            foreach (Canon canon in canons){
+            foreach (Canon canon in _canons){
                 GameManager.Instantiate("Actors/Ammo", canon.transform, transform.parent.gameObject);
             }
         }

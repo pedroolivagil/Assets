@@ -18,6 +18,7 @@ namespace Game.Game{
         private Health _healthBar;
         private Transform _targetPlayer;
         private player _player;
+        private Canon[] _canons;
         private float _dir = 0;
         private float _normalSpeed;
         private float _smoothTime = .3f;
@@ -27,6 +28,7 @@ namespace Game.Game{
             _healthBar = gameObject.GetComponentInChildren<Health>();
             _healthBar.gameObject.SetActive(ShowHealthBar);
             StartCoroutine(UpdateDir());
+            _canons = gameObject.GetComponentsInChildren<Canon>();
         }
 
         void Update(){
@@ -62,7 +64,8 @@ namespace Game.Game{
                     if (_targetPlayer != null){
                         if (Vector3.Distance(transform.position, _targetPlayer.position) > MinDist){
                             //move if distance from target is greater than 1
-                            Vector3 diff = new Vector3(Speed * Time.deltaTime, 0, 0) - transform.right;
+                            Vector3 diff = new Vector3(Speed * Time.deltaTime, 0, 0) -
+                                           new Vector3(0, -Speed * Time.deltaTime, 0);
                             transform.Translate(diff);
                         }
                         //rotate to look at the player
@@ -74,8 +77,9 @@ namespace Game.Game{
             }
             if (_targetPlayer != null && PlayerDetected &&
                 Vector3.Distance(transform.position, _targetPlayer.position) <= MaxDist){
-                //disparamos al player
-                Debug.Log("Fire!!!");
+                foreach (Canon canon in _canons){
+                    GameManager.Instantiate("Actors/Ammo", canon.transform, transform.parent.gameObject);
+                }
             }
         }
     }
