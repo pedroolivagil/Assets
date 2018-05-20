@@ -59,26 +59,22 @@ namespace Game.Game{
                     transform.Translate(x, y, 0);
                 } else{
                     if (_targetPlayer != null){
-                        if (Vector3.Distance(transform.position, _targetPlayer.position) >= MinDist){
-//                            transform.position += (_targetPlayer.position - transform.position).normalized * Speed *
-//                                                  Time.deltaTime;
+//                        if (Vector3.Distance(transform.position, _targetPlayer.position) >= MinDist){
+//                            transform.position = Vector2.MoveTowards(transform.position, _targetPlayer.position,
+//                                Speed * Time.deltaTime);
+//                        }
+//                        Vector3 movement = new Vector3(0, 0, Time.deltaTime * Speed * -1);
+//                        transform.Rotate(movement, Time.deltaTime * Speed * Rotate);
 
+                        Vector3 forwardAxis = new Vector3(0, 0, -1);
+                        transform.LookAt(_targetPlayer.position, -forwardAxis);
+                        Debug.DrawLine(transform.position, _targetPlayer.position);
+                        transform.eulerAngles = new Vector3(0, 0, -transform.eulerAngles.z);
+//                        transform.position -= transform.TransformDirection(Vector2.up) * Speed * Time.deltaTime;
+                        if (Vector3.Distance(transform.position, _targetPlayer.position) >= MinDist){
                             transform.position = Vector2.MoveTowards(transform.position, _targetPlayer.position,
                                 Speed * Time.deltaTime);
-
-
-//                            transform.LookAt(_targetPlayer.position);
-//                            transform.Rotate(new Vector3(90, 180, 180));
-//                            Vector3.RotateTowards(transform.position, _targetPlayer.position,
-//                                Time.deltaTime * Speed, 0);
-//                        transform.Rotate(Vector3.right * Time.deltaTime * Speed);
                         }
-                        Vector3 movement = new Vector3(0, 0, Time.deltaTime * Speed * -1).normalized;
-                        transform.Rotate(movement, Time.deltaTime * Speed * Rotate);
-//                    transform.Rotate(transform.position, Time.deltaTime * Speed * Rotate);
-//                        transform.rotation = Quaternion.Euler(transform.eulerAngles.x,
-//                            transform.eulerAngles.y,
-//                            transform.eulerAngles.z + Time.deltaTime * Speed * Rotate);
                     }
                 }
             }
