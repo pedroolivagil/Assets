@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Xml.Schema;
 using UnityEngine;
 using MonoBehaviour = Photon.MonoBehaviour;
 
@@ -59,22 +60,15 @@ namespace Game.Game{
                     transform.Translate(x, y, 0);
                 } else{
                     if (_targetPlayer != null){
-//                        if (Vector3.Distance(transform.position, _targetPlayer.position) >= MinDist){
-//                            transform.position = Vector2.MoveTowards(transform.position, _targetPlayer.position,
-//                                Speed * Time.deltaTime);
-//                        }
-//                        Vector3 movement = new Vector3(0, 0, Time.deltaTime * Speed * -1);
-//                        transform.Rotate(movement, Time.deltaTime * Speed * Rotate);
-
-                        Vector3 forwardAxis = new Vector3(0, 0, -1);
-                        transform.LookAt(_targetPlayer.position, -forwardAxis);
-                        Debug.DrawLine(transform.position, _targetPlayer.position);
-                        transform.eulerAngles = new Vector3(0, 0, -transform.eulerAngles.z);
-//                        transform.position -= transform.TransformDirection(Vector2.up) * Speed * Time.deltaTime;
-                        if (Vector3.Distance(transform.position, _targetPlayer.position) >= MinDist){
-                            transform.position = Vector2.MoveTowards(transform.position, _targetPlayer.position,
-                                Speed * Time.deltaTime);
+                        if (Vector3.Distance(transform.position, _targetPlayer.position) > MinDist){
+                            //move if distance from target is greater than 1
+                            Vector3 diff = new Vector3(Speed * Time.deltaTime, 0, 0) - transform.right;
+                            transform.Translate(diff);
                         }
+                        //rotate to look at the player
+                        transform.LookAt(_targetPlayer.position);
+                        //correcting the original rotation
+                        transform.Rotate(new Vector3(0, -90, transform.rotation.z - 90), Space.Self);
                     }
                 }
             }
