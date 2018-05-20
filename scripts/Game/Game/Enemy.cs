@@ -10,10 +10,8 @@ namespace Game.Game{
         public float Rotate = 100f;
         public float MinDist = 10f;
         public float MaxDist = 5f;
+        public float TimeShooting = 1;
         public bool PlayerDetected;
-
-        //Vector3 used to store the velocity of the enemy
-        private Vector3 _velocity = Vector3.zero;
 
         private Health _healthBar;
         private Transform _targetPlayer;
@@ -22,13 +20,14 @@ namespace Game.Game{
         private float _dir = 0;
         private float _normalSpeed;
         private float _smoothTime = .3f;
+        private float _currentTime = 0;
 
         void Start(){
             _normalSpeed = Speed;
             _healthBar = gameObject.GetComponentInChildren<Health>();
+            _canons = gameObject.GetComponentsInChildren<Canon>();
             _healthBar.gameObject.SetActive(ShowHealthBar);
             StartCoroutine(UpdateDir());
-            _canons = gameObject.GetComponentsInChildren<Canon>();
         }
 
         void Update(){
@@ -39,6 +38,7 @@ namespace Game.Game{
                 }
             }
             Movement();
+            Shoot();
         }
 
         private IEnumerator UpdateDir(){
@@ -75,10 +75,16 @@ namespace Game.Game{
                     }
                 }
             }
-            if (_targetPlayer != null && PlayerDetected &&
+        }
+
+        private void Shoot(){
+            if (Time.time > _currentTime && _targetPlayer != null && PlayerDetected &&
                 Vector3.Distance(transform.position, _targetPlayer.position) <= MaxDist){
+                Debug.Log("Prepared to fire! Canons: " + _canons);
                 foreach (Canon canon in _canons){
+                    Debug.Log("Fire!");
                     GameManager.Instantiate("Actors/Ammo", canon.transform, transform.parent.gameObject);
+                    _currentTime = Time.time + TimeShooting;
                 }
             }
         }

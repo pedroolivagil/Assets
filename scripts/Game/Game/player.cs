@@ -6,6 +6,7 @@ public class player : Photon.MonoBehaviour{
     public float Speed = 3.0f;
     public float Rotate = 100f;
     public float ZoomCamera = -15f;
+    
     private Canon[] _canons;
 
     void Start(){
