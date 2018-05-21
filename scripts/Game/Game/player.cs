@@ -5,7 +5,7 @@ namespace Game.Game{
         private Camera _camera;
         public float Speed = 3.0f;
         public float Rotate = 100f;
-        public float ZoomCamera = -15f;
+        public float ZoomCamera = -10f;
 
         private Canon[] _canons;
 
