@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114808714070987844}
   - component: {fileID: 65872733938539388}
   - component: {fileID: 65809799739220062}
+  - component: {fileID: 135449470615321106}
   m_Layer: 0
   m_Name: State-14
   m_TagString: Enemy
@@ -313,6 +314,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dab1d000677f7d4a853879956da5e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &135449470615321106
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1348190816002854}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198875045767512482
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 114103263174542054}
   - component: {fileID: 65838926792891454}
   - component: {fileID: 65930976740926696}
+  - component: {fileID: 135696568100353292}
   m_Layer: 0
   m_Name: Imperial
   m_TagString: Enemy
@@ -313,6 +314,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Energy: 10
   Shield: 1
+--- !u!135 &135696568100353292
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537149163642106}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198714574164047842
 ParticleSystem:
   m_ObjectHideFlags: 1

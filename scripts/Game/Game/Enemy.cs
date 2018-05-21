@@ -15,7 +15,7 @@ namespace Game.Game{
 
         private Health _healthBar;
         private Transform _targetPlayer;
-        private player _player;
+        private Player _player;
         private Canon[] _canons;
         private SphereCollider _sphereCollider;
         private float _dir = 0;
@@ -35,7 +35,7 @@ namespace Game.Game{
 
         void Update(){
             if (_player == null && _targetPlayer == null){
-                _player = FindObjectOfType<player>();
+                _player = FindObjectOfType<Player>();
                 if (_player != null){
                     _targetPlayer = _player.transform;
                 }

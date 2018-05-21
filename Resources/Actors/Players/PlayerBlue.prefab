@@ -35,13 +35,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4063815681081300}
   - component: {fileID: 212562298798196210}
-  - component: {fileID: 114857136677914488}
   - component: {fileID: 65768085116432288}
   - component: {fileID: 65902396593309964}
   - component: {fileID: 65225159215494832}
   - component: {fileID: 54716498163479558}
   - component: {fileID: 114669504722138608}
   - component: {fileID: 114278287415719580}
+  - component: {fileID: 114728511124521416}
   m_Layer: 0
   m_Name: PlayerBlue
   m_TagString: Player
@@ -267,7 +267,7 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
---- !u!114 &114857136677914488
+--- !u!114 &114728511124521416
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890aeeafa3c4739409c97f8d8c0fd23f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
+  Speed: 3
   Rotate: 100
   ZoomCamera: -10
 --- !u!198 &198000975028269308
