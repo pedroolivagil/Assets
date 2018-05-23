@@ -42,7 +42,7 @@ namespace Game.Game{
         private void Shoot(){
             if (Input.GetButtonDown("Jump")){
                 foreach (Canon canon in _canons){
-                    GameManager.Instantiate("Actors/Ammo", canon.transform, transform.parent.gameObject);
+                    GameManager.Instantiate("Actors/Effects/Weapons/Ammo", canon.transform, transform.parent.gameObject);
                 }
             }
         }

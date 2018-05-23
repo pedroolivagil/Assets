@@ -20,16 +20,17 @@ namespace Game.Game{
         void OnParticleCollision(GameObject other){
             ParticleSystem partSyst = other.GetComponent<ParticleSystem>();
             int numCollisionEvents = partSyst.GetCollisionEvents(gameObject, _collisionEvents);
-            Debug.Log("Collisions: " + numCollisionEvents);
-            int i = 0;
-            while (i < numCollisionEvents){
+//            int i = 0;
+//            while (i < numCollisionEvents){
+            if (numCollisionEvents > 0){
                 var collisionHitLoc = _collisionEvents[0].colliderComponent;
                 if (collisionHitLoc != null){
                     Vector3 position = new Vector3(collisionHitLoc.transform.position.x,
                         collisionHitLoc.transform.position.y, -2);
-                    GameManager.Instantiate("Actors/Effects/ExplosionMini", position, Quaternion.identity, null);
+                    GameManager.Instantiate("Actors/Effects/Explosions/ExplosionMini", position, Quaternion.identity,
+                        null);
                 }
-                i++;
+//                i++;
             }
             DestroyObject(other);
             _healthBar.Hit(1, gameObject);

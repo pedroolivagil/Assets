@@ -100,12 +100,11 @@ GameObject:
   - component: {fileID: 4530742963586938}
   - component: {fileID: 212267046561264768}
   - component: {fileID: 114055731213810672}
-  - component: {fileID: 65720340939449774}
-  - component: {fileID: 65696922815055898}
-  - component: {fileID: 65523400876707538}
   - component: {fileID: 54961011033328680}
   - component: {fileID: 114203442394873396}
   - component: {fileID: 114713144043827544}
+  - component: {fileID: 65272027736459066}
+  - component: {fileID: 65457688415908568}
   m_Layer: 0
   m_Name: PlayerOrange
   m_TagString: Player
@@ -136,7 +135,7 @@ Transform:
   m_GameObject: {fileID: 1943488185123630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4636257586975136}
   - {fileID: 4064413249171534}
@@ -163,8 +162,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1432871563461158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: -1.87, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4992104395038000}
   m_Father: {fileID: 4530742963586938}
@@ -190,8 +189,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1777224956780864}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 0, y: -0.89, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.51, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4636257586975136}
   m_RootOrder: 0
@@ -211,7 +210,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &65523400876707538
+--- !u!65 &65272027736459066
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -221,9 +220,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.36037564, y: 0.2820359, z: 1}
-  m_Center: {x: 0.2977953, y: -0.123372346, z: 0}
---- !u!65 &65696922815055898
+  m_Size: {x: 1.0043383, y: 4.3188076, z: 0.2}
+  m_Center: {x: -0.027797222, y: -0.055595875, z: 0}
+--- !u!65 &65457688415908568
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -233,20 +232,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.35016525, y: 0.28714097, z: 1}
-  m_Center: {x: -0.29439205, y: -0.12422317, z: 0}
---- !u!65 &65720340939449774
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1943488185123630}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.23274887, y: 0.75, z: 1}
-  m_Center: {x: -0.0008508563, y: 0, z: 0}
+  m_Size: {x: 5.146242, y: 1.4834137, z: 0.2}
+  m_Center: {x: -0.0138988495, y: -0.7227473, z: 0}
 --- !u!114 &114055731213810672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -258,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890aeeafa3c4739409c97f8d8c0fd23f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 1.5
   Rotate: 100
   ZoomCamera: -10
 --- !u!114 &114127635345961350
@@ -321,7 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Energy: 50
-  Shield: 1
+  Shield: 10
 --- !u!198 &198218763739349388
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -382,7 +369,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -997298713
+  randomSeed: 2059260309
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3816,7 +3803,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0a6e2ddc91f066741a4e4ee44e5b4ed0, type: 3}
+  m_Sprite: {fileID: 21300152, guid: 1131a27bc8e2a344085c17e6f834255c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

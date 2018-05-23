@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Xml.Schema;
+using UnityEditor;
 using UnityEngine;
 using MonoBehaviour = Photon.MonoBehaviour;
 
@@ -22,6 +22,7 @@ namespace Game.Game{
         private float _normalSpeed;
         private float _smoothTime = .3f;
         private float _currentTime = 0;
+        private float _directionTime = 0;
 
         void Start(){
             _normalSpeed = Speed;
@@ -30,7 +31,6 @@ namespace Game.Game{
             _sphereCollider = gameObject.GetComponentInChildren<SphereCollider>();
             _sphereCollider.radius = RadiusDetectPlayer;
             _healthBar.gameObject.SetActive(ShowHealthBar);
-            StartCoroutine(UpdateDir());
         }
 
         void Update(){
@@ -41,15 +41,18 @@ namespace Game.Game{
                 }
             }
             Movement();
-//            Shoot();
+            UpdateDir();
         }
 
-        private IEnumerator UpdateDir(){
-            yield return new WaitForSeconds(1);
-            _dir = 0;
-            yield return new WaitForSeconds(GameManager.RandomBetween(5, 20));
-            _dir = GameManager.RandomBetween(-1, 1);
-            yield return UpdateDir();
+        void UpdateDir(){
+            if (Time.time > _directionTime){
+                _dir = Random.Range(-1.0f, 1.1f);
+                _directionTime = Time.time + GameManager.RandomBetween(3, 15);
+            } else{
+                if (!_dir.Equals(0)){
+                    _dir = 0;
+                }
+            }
         }
 
         private void Movement(){
@@ -62,16 +65,18 @@ namespace Game.Game{
                     transform.Rotate(movement, Time.deltaTime * Speed * Rotate);
                     transform.Translate(x, y, 0);
                 } else{
-                    if (Vector3.Distance(transform.position, _targetPlayer.position) > MinDist){
-                        //move if distance from target is greater than 1
-                        Vector3 diff = new Vector3(Speed * Time.deltaTime, 0, 0) -
-                                       new Vector3(0, -Speed * Time.deltaTime, 0);
-                        transform.Translate(diff);
+                    if (_targetPlayer != null){
+                        if (Vector3.Distance(transform.position, _targetPlayer.position) > MinDist){
+                            //move if distance from target is greater than 1
+                            Vector3 diff = new Vector3(Speed * Time.deltaTime, 0, 0) -
+                                           new Vector3(0, -Speed * Time.deltaTime, 0);
+                            transform.Translate(diff);
+                        }
+                        //rotate to look at the player
+                        transform.LookAt(_targetPlayer.position);
+                        //correcting the original rotation
+                        transform.Rotate(new Vector3(0, -90, transform.rotation.z - 90), Space.Self);
                     }
-                    //rotate to look at the player
-                    transform.LookAt(_targetPlayer.position);
-                    //correcting the original rotation
-                    transform.Rotate(new Vector3(0, -90, transform.rotation.z - 90), Space.Self);
                 }
             }
         }
@@ -79,24 +84,36 @@ namespace Game.Game{
         private void Shoot(){
             if (Time.time > _currentTime && _targetPlayer != null && PlayerDetected){
                 foreach (Canon canon in _canons){
-                    GameManager.Instantiate("Actors/Ammo", canon.transform, transform.parent.gameObject);
+                    GameManager.Instantiate("Actors/Effects/Weapons/Ammo", canon.transform, gameObject.gameObject);
                     _currentTime = Time.time + TimeShooting;
                 }
             }
         }
 
         void OnTriggerEnter(Collider other){
-            Debug.Log("Enter: " + other);
-            PlayerDetected = true;
+            var capsuleCollider = other.GetComponent<CapsuleCollider>();
+            Debug.Log(capsuleCollider);
+            if (other.tag.Equals(Tag.Player.ToString())){
+                PlayerDetected = true;
+            }
+            if (capsuleCollider != null && other.tag.Equals(Tag.Enemy.ToString())){
+                _dir = _dir * -1f;
+            }
         }
 
         void OnTriggerStay(Collider other){
-            Shoot();
+            if (other.tag.Equals(Tag.Player.ToString())){
+                Shoot();
+            }
         }
 
         void OnTriggerExit(Collider other){
-            Debug.Log("Exit: " + other);
-            PlayerDetected = false;
+            if (other.tag.Equals(Tag.Player.ToString())){
+                PlayerDetected = false;
+            }
+            if (other.tag.Equals(Tag.Enemy.ToString())){
+                _dir = 0;
+            }
         }
     }
 }
