@@ -138,10 +138,10 @@ TextureImporter:
       name: ovnis_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 0
-        width: 2417
-        height: 2413
+        x: 0
+        y: 3984
+        width: 3864
+        height: 3863
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +152,10 @@ TextureImporter:
       name: ovnis_1
       rect:
         serializedVersion: 2
-        x: 2876
-        y: 0
-        width: 2422
-        height: 2414
+        x: 3982
+        y: 3983
+        width: 3864
+        height: 3864
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: ovnis_2
       rect:
         serializedVersion: 2
-        x: 5733
+        x: 0
         y: 0
-        width: 2416
-        height: 2414
+        width: 3864
+        height: 3864
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,10 +180,10 @@ TextureImporter:
       name: ovnis_3
       rect:
         serializedVersion: 2
-        x: 8585
+        x: 3982
         y: 0
-        width: 2413
-        height: 2414
+        width: 3864
+        height: 3864
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
