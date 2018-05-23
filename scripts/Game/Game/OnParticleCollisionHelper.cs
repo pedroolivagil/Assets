@@ -12,11 +12,6 @@ namespace Game.Game{
             _collisionEvents = new List<ParticleCollisionEvent>();
         }
 
-        void OnTriggerEnter(Collider other){
-            Debug.Log("TriggerEnter");
-        }
-
-
         void OnParticleCollision(GameObject other){
             ParticleSystem partSyst = other.GetComponent<ParticleSystem>();
             int numCollisionEvents = partSyst.GetCollisionEvents(gameObject, _collisionEvents);

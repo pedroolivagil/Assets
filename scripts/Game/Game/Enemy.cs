@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using UnityEditor;
 using UnityEngine;
 using MonoBehaviour = Photon.MonoBehaviour;
 
@@ -18,19 +17,29 @@ namespace Game.Game{
         private Player _player;
         private Canon[] _canons;
         private SphereCollider _sphereCollider;
+
         private float _dir = 0;
-        private float _normalSpeed;
+
+//        private float _normalSpeed;
         private float _smoothTime = .3f;
+
         private float _currentTime = 0;
         private float _directionTime = 0;
 
         void Start(){
-            _normalSpeed = Speed;
+//            _normalSpeed = Speed;
             _healthBar = gameObject.GetComponentInChildren<Health>();
             _canons = gameObject.GetComponentsInChildren<Canon>();
             _sphereCollider = gameObject.GetComponentInChildren<SphereCollider>();
             _sphereCollider.radius = RadiusDetectPlayer;
             _healthBar.gameObject.SetActive(ShowHealthBar);
+            StartCoroutine(ResetDir());
+        }
+
+        private IEnumerator ResetDir(){
+            yield return new WaitForSeconds(GameManager.RandomBetween(0, 1));
+            _dir = 0;
+            yield return ResetDir(); 
         }
 
         void Update(){
@@ -47,22 +56,26 @@ namespace Game.Game{
         void UpdateDir(){
             if (Time.time > _directionTime){
                 _dir = Random.Range(-1.0f, 1.1f);
-                _directionTime = Time.time + GameManager.RandomBetween(3, 15);
+//                _dir = GameManager.RandomBetween(-1, 1);
+                _directionTime = Time.time + GameManager.RandomBetween(2, 5);
+                Debug.Log("Dir: " + _dir);
             } else{
-                if (!_dir.Equals(0)){
-                    _dir = 0;
-                }
+                //pensar la forma de redireccionar la nave. actualmente no le da tiempo a girar;
+//                solo lo hace unos grados
+//                if (!_dir.Equals(0)){
+//                    _dir = 0;
+//                }
             }
         }
 
         private void Movement(){
             if (Speed > 0){
                 if (!PlayerDetected){
-                    Speed = _normalSpeed;
+//                    Speed = _normalSpeed;
                     float x = _dir * Time.deltaTime * Speed;
                     float y = Time.deltaTime * Speed;
                     Vector3 movement = new Vector3(0, 0, x * -1);
-                    transform.Rotate(movement, Time.deltaTime * Speed * Rotate);
+                    transform.Rotate(movement, _dir * Time.deltaTime * Speed * Rotate);
                     transform.Translate(x, y, 0);
                 } else{
                     if (_targetPlayer != null){
@@ -91,14 +104,13 @@ namespace Game.Game{
         }
 
         void OnTriggerEnter(Collider other){
-            var capsuleCollider = other.GetComponent<CapsuleCollider>();
-            Debug.Log(capsuleCollider);
             if (other.tag.Equals(Tag.Player.ToString())){
                 PlayerDetected = true;
             }
-            if (capsuleCollider != null && other.tag.Equals(Tag.Enemy.ToString())){
-                _dir = _dir * -1f;
-            }
+//            if (other.tag.Equals(Tag.Enemy.ToString()) && Time.time > _directionTime){
+//                _dir = _dir * -1;
+//                _directionTime = Time.time + GameManager.RandomBetween(5, 15);
+//            }
         }
 
         void OnTriggerStay(Collider other){
@@ -110,9 +122,6 @@ namespace Game.Game{
         void OnTriggerExit(Collider other){
             if (other.tag.Equals(Tag.Player.ToString())){
                 PlayerDetected = false;
-            }
-            if (other.tag.Equals(Tag.Enemy.ToString())){
-                _dir = 0;
             }
         }
     }
