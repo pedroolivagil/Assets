@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 65177294878128726}
   - component: {fileID: 65160886161392274}
   - component: {fileID: 136900795798957560}
+  - component: {fileID: 114041141486362164}
   m_Layer: 0
   m_Name: Enemy6
   m_TagString: Enemy
@@ -359,6 +360,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0219402, y: 2.1417313, z: 0.2}
   m_Center: {x: -0.01685524, y: -0.18148422, z: 0}
+--- !u!114 &114041141486362164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333024882122552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 0
+  instantiationId: -1
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!114 &114153441665590732
 MonoBehaviour:
   m_ObjectHideFlags: 1

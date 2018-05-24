@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 65351344905203634}
   - component: {fileID: 65494193596697746}
   - component: {fileID: 136496531683191032}
+  - component: {fileID: 114535220381385144}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -381,6 +382,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208daaa43a064964ab78fed21c8b7c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114535220381385144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1417315256336522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 0
+  instantiationId: -1
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!135 &135975667244851612
 SphereCollider:
   m_ObjectHideFlags: 1

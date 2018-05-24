@@ -10,14 +10,14 @@ namespace Game.Game{
         [Tooltip("Maximum level that will have the enemies that will go through the spawn points")]
         public int MaxEnemyLevel = 3;
 
-        private List<GameObject> _spawners;
+        private List<Transform> _spawners;
 
         // Use this for initialization
         void Start(){
-            _spawners = new List<GameObject>();
-            var all = GetComponentsInChildren<GameObject>();
+            _spawners = new List<Transform>();
+            var all = gameObject.GetComponentsInChildren<Transform>();
             foreach (var gObject in all){
-                if (gObject.CompareTag(Tag.Enemy.ToString())){
+                if (gObject.CompareTag(Tag.EnemySpawner.ToString())){
                     _spawners.Add(gObject);
                 }
             }
@@ -25,21 +25,19 @@ namespace Game.Game{
         }
 
         private IEnumerator Respawn(){
-            yield return new WaitForSeconds(TimeToRespawn);
             foreach (var gob in _spawners){
                 for (int x = 0; x < EnemyQuantity; x++){
-                    var prefab = RandomEnemy();
-                    if (prefab != null){
-                        GameManager.InstantiatePhoton(prefab, gob.transform, gob.transform.parent.gameObject);
-                        yield return new WaitForSeconds(1f / 100f);
-                    }
+                    Debug.Log("Enemy spawned");
+                    GameManager.InstantiatePhoton(RandomEnemy(), gob, gob.parent.gameObject);
+                    yield return new WaitForSeconds(1f / 100f);
                 }
             }
+            yield return new WaitForSeconds(TimeToRespawn);
         }
 
         private string RandomEnemy(){
             if (MaxEnemyLevel > 4){
-                return null;
+                MaxEnemyLevel = 4;
             }
             string url = "Actors/Enemies/Type";
             url += GameManager.RandomBetween(1, MaxEnemyLevel);

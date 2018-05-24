@@ -35,8 +35,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1633048174661474}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.128333, y: -1.4638307, z: -4.3060975}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,6 +80,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Version: 1
+  Camera: {fileID: 0}
+  GroupInstance: {fileID: 0}
+  Positions:
+  - {fileID: 0}
+  PrefabsList:
+  - Players/PlayerBlue
+  - Enemies/Type5/Mothership
 --- !u!114 &114667982565560482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,4 +98,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 321c592dfcb49cd458c8f2cbe497513d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skin: {fileID: 11400000, guid: 0a36872c871b46d4ea5e4e064f3bf975, type: 2}
+  Skin: {fileID: 11400000, guid: 798b8fafc1a9fe74cae8837a57ccae37, type: 2}

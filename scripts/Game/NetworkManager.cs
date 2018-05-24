@@ -1,12 +1,17 @@
-﻿using Scenes;
+﻿using System;
+using System.Collections.Generic;
+using Scenes;
 using UnityEngine;
 
 namespace Game{
     public class NetworkManager : Photon.MonoBehaviour{
         public string Version;
         public Camera Camera;
-        public Transform[] Positions;
         public GameObject GroupInstance;
+        public Transform[] Positions;
+
+        [Tooltip("List prefabs name inside dir /Resources/Actors/ for instantiate online")]
+        public List<String> PrefabsList;
 
         void Start(){
             DontDestroyOnLoad(gameObject);
@@ -23,10 +28,12 @@ namespace Game{
         }
 
         void OnJoinedRoom(){
-            Transform position = Positions[GameManager.RandomBetween(0, Positions.Length - 1)];
 //            GameObject obj = PhotonNetwork.InstantiatePhoton("Actors/Players/PlayerBlue", position.position, Quaternion.identity, 0);
 //            obj.transform.parent = GroupInstance.transform;
-            GameManager.InstantiatePhoton("Actors/Players/PlayerBlue", position, GroupInstance);
+            foreach (string prefabName in PrefabsList){
+                Transform position = Positions[GameManager.RandomBetween(0, Positions.Length - 1)];
+                GameManager.InstantiatePhoton("Actors/" + prefabName, position, GroupInstance);
+            }
         }
     }
 }
