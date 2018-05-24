@@ -3277,7 +3277,7 @@ internal class NetworkingPeer : LoadBalancingPeer, IPhotonPeerListener
 
                 if (resourceGameObject == null)
                 {
-                    Debug.LogError("PhotonNetwork error: Could not Instantiate the prefab [" + prefabName + "]. Please verify you have this gameobject in a Resources folder.");
+                    Debug.LogError("PhotonNetwork error: Could not InstantiatePhoton the prefab [" + prefabName + "]. Please verify you have this gameobject in a Resources folder.");
                     return null;
                 }
             }
@@ -3364,7 +3364,7 @@ internal class NetworkingPeer : LoadBalancingPeer, IPhotonPeerListener
 
         if (!localOnly)
         {
-            // clean server's Instantiate and RPC buffers
+            // clean server's InstantiatePhoton and RPC buffers
             this.OpRemoveFromServerInstantiationsOfPlayer(playerId);
             this.OpCleanRpcBuffer(playerId);
 
@@ -3471,7 +3471,7 @@ internal class NetworkingPeer : LoadBalancingPeer, IPhotonPeerListener
                 continue;
             }
 
-            // we only destroy/clean PhotonViews that were created by PhotonNetwork.Instantiate (and those have an instantiationId!)
+            // we only destroy/clean PhotonViews that were created by PhotonNetwork.InstantiatePhoton (and those have an instantiationId!)
             if (view.instantiationId >= 1)
             {
                 this.LocalCleanPhotonView(view);
@@ -3520,7 +3520,7 @@ internal class NetworkingPeer : LoadBalancingPeer, IPhotonPeerListener
         options = null;
         if (!isRuntimeInstantiated)
         {
-            // if the view got loaded with the scene, the EvDestroy must be cached (there is no Instantiate-msg which we can remove)
+            // if the view got loaded with the scene, the EvDestroy must be cached (there is no InstantiatePhoton-msg which we can remove)
             // reason: joining players will load the obj and have to destroy it (too)
             options = new RaiseEventOptions();
             options.CachingOption = EventCaching.AddToRoomCacheGlobal;

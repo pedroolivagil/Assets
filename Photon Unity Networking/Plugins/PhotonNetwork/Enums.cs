@@ -279,7 +279,7 @@ public enum PhotonNetworkingMessage
     OnPhotonSerializeView,
 
     /// <summary>
-    /// Called on all scripts on a GameObject (and children) that have been Instantiated using PhotonNetwork.Instantiate.
+    /// Called on all scripts on a GameObject (and children) that have been Instantiated using PhotonNetwork.InstantiatePhoton.
     /// </summary>
     /// <remarks>
     /// PhotonMessageInfo parameter provides info about who created the object and when (based off PhotonNetworking.time).

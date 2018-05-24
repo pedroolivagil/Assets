@@ -17,7 +17,7 @@ public class Health : MonoBehaviour{
         }
         if (Energy == 0){
             DestroyObject(target);
-            GameManager.Instantiate("Actors/Effects/Explosions/Explosion", target.transform, null);
+            GameManager.InstantiatePhoton("Actors/Effects/Explosions/Explosion", target.transform, null);
         }
     }
 

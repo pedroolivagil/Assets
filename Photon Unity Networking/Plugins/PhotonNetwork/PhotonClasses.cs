@@ -197,7 +197,7 @@ public interface IPunCallbacks
     void OnDisconnectedFromPhoton();
 
     /// <summary>
-    /// Called on all scripts on a GameObject (and children) that have been Instantiated using PhotonNetwork.Instantiate.
+    /// Called on all scripts on a GameObject (and children) that have been Instantiated using PhotonNetwork.InstantiatePhoton.
     /// </summary>
     /// <remarks>
     /// PhotonMessageInfo parameter provides info about who created the object and when (based off PhotonNetworking.time).
@@ -427,7 +427,7 @@ public interface IPunCallbacks
 /// <remarks>
 /// To use a Object Pool for instantiation, you can set PhotonNetwork.ObjectPool.
 /// That is used for all objects, as long as ObjectPool is not null.
-/// The pool has to return a valid non-null GameObject when PUN calls Instantiate.
+/// The pool has to return a valid non-null GameObject when PUN calls InstantiatePhoton.
 /// Also, the position and rotation must be applied.
 ///
 /// Please note that pooled GameObjects don't get the usual Awake and Start calls.
@@ -671,7 +671,7 @@ namespace Photon
         }
 
         /// <summary>
-        /// Called on all scripts on a GameObject (and children) that have been Instantiated using PhotonNetwork.Instantiate.
+        /// Called on all scripts on a GameObject (and children) that have been Instantiated using PhotonNetwork.InstantiatePhoton.
         /// </summary>
         /// <remarks>
         /// PhotonMessageInfo parameter provides info about who created the object and when (based off PhotonNetworking.time).

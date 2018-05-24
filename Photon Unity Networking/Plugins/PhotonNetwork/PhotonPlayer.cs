@@ -107,7 +107,7 @@ public class PhotonPlayer : IComparable<PhotonPlayer>, IComparable<int>, IEquata
     }
 
     /// <summary>Can be used to store a reference that's useful to know "by player".</summary>
-    /// <remarks>Example: Set a player's character as Tag by assigning the GameObject on Instantiate.</remarks>
+    /// <remarks>Example: Set a player's character as Tag by assigning the GameObject on InstantiatePhoton.</remarks>
     public object TagObject;
 
 

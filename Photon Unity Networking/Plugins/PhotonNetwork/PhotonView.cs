@@ -96,7 +96,7 @@ public class PhotonView : Photon.MonoBehaviour
     public int prefixBackup = -1;
 
     /// <summary>
-    /// This is the instantiationData that was passed when calling PhotonNetwork.Instantiate* (if that was used to spawn this prefab)
+    /// This is the instantiationData that was passed when calling PhotonNetwork.InstantiatePhoton* (if that was used to spawn this prefab)
     /// </summary>
     public object[] instantiationData
     {

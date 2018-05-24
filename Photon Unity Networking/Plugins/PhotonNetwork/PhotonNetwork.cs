@@ -222,7 +222,7 @@ public static class PhotonNetwork
         }
     }
 
-    /// <summary>If true, Instantiate methods will check if you are in a room and fail if you are not.</summary>
+    /// <summary>If true, InstantiatePhoton methods will check if you are in a room and fail if you are not.</summary>
     /// <remarks>
     /// Instantiating anything outside of a specific room is very likely to break things.
     /// Turn this off only if you know what you do.</remarks>
@@ -405,7 +405,7 @@ public static class PhotonNetwork
     public static bool UseRpcMonoBehaviourCache;
 
     /// <summary>
-    /// While enabled (true), Instantiate uses PhotonNetwork.PrefabCache to keep game objects in memory (improving instantiation of the same prefab).
+    /// While enabled (true), InstantiatePhoton uses PhotonNetwork.PrefabCache to keep game objects in memory (improving instantiation of the same prefab).
     /// </summary>
     /// <remarks>
     /// Setting UsePrefabCache to false during runtime will not clear PrefabCache but will ignore it right away.
@@ -414,7 +414,7 @@ public static class PhotonNetwork
     public static bool UsePrefabCache = true;
 
     /// <summary>
-    /// An Object Pool can be used to keep and reuse instantiated object instances. It replaced Unity's default Instantiate and Destroy methods.
+    /// An Object Pool can be used to keep and reuse instantiated object instances. It replaced Unity's default InstantiatePhoton and Destroy methods.
     /// </summary>
     /// <remarks>
     /// To use a GameObject pool, implement IPunPrefabPool and assign it here.
@@ -426,7 +426,7 @@ public static class PhotonNetwork
     /// Keeps references to GameObjects for frequent instantiation (out of memory instead of loading the Resources).
     /// </summary>
     /// <remarks>
-    /// You should be able to modify the cache anytime you like, except while Instantiate is used. Best do it only in the main-Thread.
+    /// You should be able to modify the cache anytime you like, except while InstantiatePhoton is used. Best do it only in the main-Thread.
     /// </remarks>
     public static Dictionary<string, GameObject> PrefabCache = new Dictionary<string, GameObject>();
 
@@ -467,7 +467,7 @@ public static class PhotonNetwork
     /// <summary>
     /// Offline mode can be set to re-use your multiplayer code in singleplayer game modes.
     /// When this is on PhotonNetwork will not create any connections and there is near to
-    /// no overhead. Mostly usefull for reusing RPC's and PhotonNetwork.Instantiate
+    /// no overhead. Mostly usefull for reusing RPC's and PhotonNetwork.InstantiatePhoton
     /// </summary>
     public static bool offlineMode
     {
@@ -895,7 +895,7 @@ public static class PhotonNetwork
 
     /// <summary>Is true while being in a room (connectionStateDetailed == ClientState.Joined).</summary>
     /// <remarks>
-    /// Many actions can only be executed in a room, like Instantiate or Leave, etc.
+    /// Many actions can only be executed in a room, like InstantiatePhoton or Leave, etc.
     /// You can join a room in offline mode, too.
     /// </remarks>
     public static bool inRoom
@@ -1981,7 +1981,7 @@ public static class PhotonNetwork
 	/// Note: To be able to ReJoin any room, you need to use UserIDs!
 	/// You also need to set RoomOptions.PlayerTtl.
 	///
-	/// <b>Important: Instantiate() and use of RPCs is not yet supported.</b>
+	/// <b>Important: InstantiatePhoton() and use of RPCs is not yet supported.</b>
 	/// The ownership rules of PhotonViews prevent a seamless return to a game.
 	/// Use Custom Properties and RaiseEvent with event caching instead.
 	///
@@ -2448,10 +2448,10 @@ public static class PhotonNetwork
     }
 
     /// <summary>
-    /// Instantiate a prefab over the network. This prefab needs to be located in the root of a "Resources" folder.
+    /// InstantiatePhoton a prefab over the network. This prefab needs to be located in the root of a "Resources" folder.
     /// </summary>
     /// <remarks>
-    /// Instead of using prefabs in the Resources folder, you can manually Instantiate and assign PhotonViews. See doc.
+    /// Instead of using prefabs in the Resources folder, you can manually InstantiatePhoton and assign PhotonViews. See doc.
     /// </remarks>
     /// <param name="prefabName">Name of the prefab to instantiate.</param>
     /// <param name="position">Position Vector3 to apply on instantiation.</param>
@@ -2464,9 +2464,9 @@ public static class PhotonNetwork
     }
 
     /// <summary>
-    /// Instantiate a prefab over the network. This prefab needs to be located in the root of a "Resources" folder.
+    /// InstantiatePhoton a prefab over the network. This prefab needs to be located in the root of a "Resources" folder.
     /// </summary>
-    /// <remarks>Instead of using prefabs in the Resources folder, you can manually Instantiate and assign PhotonViews. See doc.</remarks>
+    /// <remarks>Instead of using prefabs in the Resources folder, you can manually InstantiatePhoton and assign PhotonViews. See doc.</remarks>
     /// <param name="prefabName">Name of the prefab to instantiate.</param>
     /// <param name="position">Position Vector3 to apply on instantiation.</param>
     /// <param name="rotation">Rotation Quaternion to apply on instantiation.</param>
@@ -2477,7 +2477,7 @@ public static class PhotonNetwork
     {
         if (!connected || (InstantiateInRoomOnly && !inRoom))
         {
-            Debug.LogError("Failed to Instantiate prefab: " + prefabName + ". Client should be in a room. Current connectionStateDetailed: " + PhotonNetwork.connectionStateDetailed);
+            Debug.LogError("Failed to InstantiatePhoton prefab: " + prefabName + ". Client should be in a room. Current connectionStateDetailed: " + PhotonNetwork.connectionStateDetailed);
             return null;
         }
 
@@ -2493,14 +2493,14 @@ public static class PhotonNetwork
 
         if (prefabGo == null)
         {
-            Debug.LogError("Failed to Instantiate prefab: " + prefabName + ". Verify the Prefab is in a Resources folder (and not in a subfolder)");
+            Debug.LogError("Failed to InstantiatePhoton prefab: " + prefabName + ". Verify the Prefab is in a Resources folder (and not in a subfolder)");
             return null;
         }
 
         // a scene object instantiated with network visibility has to contain a PhotonView
         if (prefabGo.GetComponent<PhotonView>() == null)
         {
-            Debug.LogError("Failed to Instantiate prefab:" + prefabName + ". Prefab must have a PhotonView component.");
+            Debug.LogError("Failed to InstantiatePhoton prefab:" + prefabName + ". Prefab must have a PhotonView component.");
             return null;
         }
 
@@ -2508,24 +2508,24 @@ public static class PhotonNetwork
         int[] viewIDs = new int[views.Length];
         for (int i = 0; i < viewIDs.Length; i++)
         {
-            //Debug.Log("Instantiate prefabName: " + prefabName + " player.ID: " + player.ID);
+            //Debug.Log("InstantiatePhoton prefabName: " + prefabName + " player.ID: " + player.ID);
             viewIDs[i] = AllocateViewID(player.ID);
         }
 
         // Send to others, create info
         Hashtable instantiateEvent = networkingPeer.SendInstantiate(prefabName, position, rotation, group, viewIDs, data, false);
 
-        // Instantiate the GO locally (but the same way as if it was done via event). This will also cache the instantiationId
+        // InstantiatePhoton the GO locally (but the same way as if it was done via event). This will also cache the instantiationId
         return networkingPeer.DoInstantiate(instantiateEvent, networkingPeer.LocalPlayer, prefabGo);
     }
 
 
     /// <summary>
-    /// Instantiate a scene-owned prefab over the network. The PhotonViews will be controllable by the MasterClient. This prefab needs to be located in the root of a "Resources" folder.
+    /// InstantiatePhoton a scene-owned prefab over the network. The PhotonViews will be controllable by the MasterClient. This prefab needs to be located in the root of a "Resources" folder.
     /// </summary>
     /// <remarks>
-    /// Only the master client can Instantiate scene objects.
-    /// Instead of using prefabs in the Resources folder, you can manually Instantiate and assign PhotonViews. See doc.
+    /// Only the master client can InstantiatePhoton scene objects.
+    /// Instead of using prefabs in the Resources folder, you can manually InstantiatePhoton and assign PhotonViews. See doc.
     /// </remarks>
     /// <param name="prefabName">Name of the prefab to instantiate.</param>
     /// <param name="position">Position Vector3 to apply on instantiation.</param>
@@ -2582,7 +2582,7 @@ public static class PhotonNetwork
         // Send to others, create info
         Hashtable instantiateEvent = networkingPeer.SendInstantiate(prefabName, position, rotation, group, viewIDs, data, true);
 
-        // Instantiate the GO locally (but the same way as if it was done via event). This will also cache the instantiationId
+        // InstantiatePhoton the GO locally (but the same way as if it was done via event). This will also cache the instantiationId
         return networkingPeer.DoInstantiate(instantiateEvent, networkingPeer.LocalPlayer, prefabGo);
     }
 
@@ -2716,14 +2716,14 @@ public static class PhotonNetwork
     /// </summary>
     /// <remarks>
     /// Destroying a networked GameObject while in a Room includes:
-    /// - Removal of the Instantiate call from the server's room buffer.
-    /// - Removing RPCs buffered for PhotonViews that got created indirectly with the PhotonNetwork.Instantiate call.
+    /// - Removal of the InstantiatePhoton call from the server's room buffer.
+    /// - Removing RPCs buffered for PhotonViews that got created indirectly with the PhotonNetwork.InstantiatePhoton call.
     /// - Sending a message to other clients to remove the GameObject also (affected by network lag).
     ///
     /// Usually, when you leave a room, the GOs get destroyed automatically.
     /// If you have to destroy a GO while not in a room, the Destroy is only done locally.
     ///
-    /// Destroying networked objects works only if they got created with PhotonNetwork.Instantiate().
+    /// Destroying networked objects works only if they got created with PhotonNetwork.InstantiatePhoton().
     /// Objects loaded with a scene are ignored, no matter if they have PhotonView components.
     ///
     /// The GameObject must be under this client's control:
@@ -2750,14 +2750,14 @@ public static class PhotonNetwork
     /// </summary>
     /// <remarks>
     /// Destroying a networked GameObject includes:
-    /// - Removal of the Instantiate call from the server's room buffer.
-    /// - Removing RPCs buffered for PhotonViews that got created indirectly with the PhotonNetwork.Instantiate call.
+    /// - Removal of the InstantiatePhoton call from the server's room buffer.
+    /// - Removing RPCs buffered for PhotonViews that got created indirectly with the PhotonNetwork.InstantiatePhoton call.
     /// - Sending a message to other clients to remove the GameObject also (affected by network lag).
     ///
     /// Usually, when you leave a room, the GOs get destroyed automatically.
     /// If you have to destroy a GO while not in a room, the Destroy is only done locally.
     ///
-    /// Destroying networked objects works only if they got created with PhotonNetwork.Instantiate().
+    /// Destroying networked objects works only if they got created with PhotonNetwork.InstantiatePhoton().
     /// Objects loaded with a scene are ignored, no matter if they have PhotonView components.
     ///
     /// The GameObject must be under this client's control:
@@ -2777,11 +2777,11 @@ public static class PhotonNetwork
     /// </summary>
     /// <remarks>
     /// Destroying a networked GameObject includes:
-    /// - Removal of the Instantiate call from the server's room buffer.
-    /// - Removing RPCs buffered for PhotonViews that got created indirectly with the PhotonNetwork.Instantiate call.
+    /// - Removal of the InstantiatePhoton call from the server's room buffer.
+    /// - Removing RPCs buffered for PhotonViews that got created indirectly with the PhotonNetwork.InstantiatePhoton call.
     /// - Sending a message to other clients to remove the GameObject also (affected by network lag).
     ///
-    /// Destroying networked objects works only if they got created with PhotonNetwork.Instantiate().
+    /// Destroying networked objects works only if they got created with PhotonNetwork.InstantiatePhoton().
     /// Objects loaded with a scene are ignored, no matter if they have PhotonView components.
     /// </remarks>
     /// <returns>Nothing. Check error debug log for any issues.</returns>
@@ -2800,11 +2800,11 @@ public static class PhotonNetwork
     /// </summary>
     /// <remarks>
     /// Destroying a networked GameObject includes:
-    /// - Removal of the Instantiate call from the server's room buffer.
-    /// - Removing RPCs buffered for PhotonViews that got created indirectly with the PhotonNetwork.Instantiate call.
+    /// - Removal of the InstantiatePhoton call from the server's room buffer.
+    /// - Removing RPCs buffered for PhotonViews that got created indirectly with the PhotonNetwork.InstantiatePhoton call.
     /// - Sending a message to other clients to remove the GameObject also (affected by network lag).
     ///
-    /// Destroying networked objects works only if they got created with PhotonNetwork.Instantiate().
+    /// Destroying networked objects works only if they got created with PhotonNetwork.InstantiatePhoton().
     /// Objects loaded with a scene are ignored, no matter if they have PhotonView components.
     /// </remarks>
     /// <returns>Nothing. Check error debug log for any issues.</returns>
@@ -2830,13 +2830,13 @@ public static class PhotonNetwork
     /// <remarks>
     /// Can only be called by Master Client (for anyone).
     /// Unlike the Destroy methods, this will remove anything from the server's room buffer. If your game
-    /// buffers anything beyond Instantiate and RPC calls, that will be cleaned as well from server.
+    /// buffers anything beyond InstantiatePhoton and RPC calls, that will be cleaned as well from server.
     ///
     /// Destroying all includes:
-    /// - Remove anything from the server's room buffer (Instantiate, RPCs, anything buffered).
+    /// - Remove anything from the server's room buffer (InstantiatePhoton, RPCs, anything buffered).
     /// - Sending a message to other clients to destroy everything locally, too (affected by network lag).
     ///
-    /// Destroying networked objects works only if they got created with PhotonNetwork.Instantiate().
+    /// Destroying networked objects works only if they got created with PhotonNetwork.InstantiatePhoton().
     /// Objects loaded with a scene are ignored, no matter if they have PhotonView components.
     /// </remarks>
     /// <returns>Nothing. Check error debug log for any issues.</returns>

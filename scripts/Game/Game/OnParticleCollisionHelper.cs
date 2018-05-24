@@ -22,7 +22,7 @@ namespace Game.Game{
                 if (collisionHitLoc != null){
                     Vector3 position = new Vector3(collisionHitLoc.transform.position.x,
                         collisionHitLoc.transform.position.y, -2);
-                    GameManager.Instantiate("Actors/Effects/Explosions/ExplosionMini", position, Quaternion.identity,
+                    GameManager.InstantiatePhoton("Actors/Effects/Explosions/ExplosionMini", position, Quaternion.identity,
                         null);
                 }
 //                i++;

@@ -180,7 +180,7 @@ public class GameManager : MonoBehaviour{
     }
 
 
-    public static GameObject Instantiate(String prefabUri, Transform transform, GameObject groupInstance){
+    public static GameObject InstantiatePhoton(String prefabUri, Transform transform, GameObject groupInstance){
         GameObject obj = PhotonNetwork.Instantiate(prefabUri, transform.position, transform.rotation, 0);
         if (groupInstance != null){
             obj.transform.parent = groupInstance.transform;
@@ -188,7 +188,7 @@ public class GameManager : MonoBehaviour{
         return obj;
     }
 
-    public static GameObject Instantiate(String prefabUri, Vector3 position, Quaternion rotation,
+    public static GameObject InstantiatePhoton(String prefabUri, Vector3 position, Quaternion rotation,
         GameObject groupInstance){
         GameObject obj = PhotonNetwork.Instantiate(prefabUri, position, rotation, 0);
         if (groupInstance != null){

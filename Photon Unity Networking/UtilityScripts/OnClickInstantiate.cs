@@ -13,7 +13,7 @@ public class OnClickInstantiate : MonoBehaviour
     {
         if (!PhotonNetwork.inRoom)
         {
-            // only use PhotonNetwork.Instantiate while in a room.
+            // only use PhotonNetwork.InstantiatePhoton while in a room.
             return;
         }
 

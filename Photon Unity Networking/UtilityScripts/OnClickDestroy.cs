@@ -11,7 +11,7 @@ using System.Collections;
 ///
 /// A buffered RPC gets cleaned up when the sending player leaves the room. This means, the RPC gets lost.
 ///
-/// Vice versus, a GameObject Instantiate might get cleaned up when the creating player leaves a room.
+/// Vice versus, a GameObject InstantiatePhoton might get cleaned up when the creating player leaves a room.
 /// This way, the GameObject that a RPC targets might become lost.
 ///
 /// It makes sense to test those cases. Many are not breaking errors and you just have to be aware of them.

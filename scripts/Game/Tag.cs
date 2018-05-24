@@ -1,6 +1,7 @@
 ﻿namespace Game{
     public enum Tag{
         Player,
-        Enemy
+        Enemy,
+        EnemySpawner
     }
 }
