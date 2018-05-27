@@ -162,7 +162,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1943488185123630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.59, y: -8.15, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4636257586975136}
@@ -222,7 +222,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0043383, y: 4.3188076, z: 0.2}
+  m_Size: {x: 1.0043383, y: 4.3188076, z: 2}
   m_Center: {x: -0.027797222, y: -0.055595875, z: 0}
 --- !u!65 &65457688415908568
 BoxCollider:
@@ -234,7 +234,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.146242, y: 1.4834137, z: 0.2}
+  m_Size: {x: 5.146242, y: 1.4834137, z: 2}
   m_Center: {x: -0.0138988495, y: -0.7227473, z: 0}
 --- !u!114 &114055731213810672
 MonoBehaviour:
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890aeeafa3c4739409c97f8d8c0fd23f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1.5
+  Speed: 3
   Rotate: 100
   ZoomCamera: -10
 --- !u!114 &114095146150621070
