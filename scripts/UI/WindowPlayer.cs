@@ -19,14 +19,10 @@ namespace UI{
         private void UpdateInfo(){
             if (_player != null){
                 var playerHp = _player.GetComponent<Health>();
-                if (playerHp.Energy > 0){
-                    var playerEnergy = 100 / playerHp.Energy;
-                    HealthBar.relative.right = 100 - playerEnergy;
-                }
-                if (playerHp.Shield > 0){
-                    var playerShield = 100 / playerHp.Shield;
-                    ShieldBar.relative.right = 100 - playerShield;
-                }
+                var playerEnergy = 100 / playerHp.GetInitialEnergy();
+                var playerShield = 100 / playerHp.GetInitialShield();
+                HealthBar.relative.right = playerEnergy * playerHp.Energy;
+                ShieldBar.relative.right = playerShield * playerHp.Shield;
             }
         }
     }
