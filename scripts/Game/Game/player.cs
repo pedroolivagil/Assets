@@ -10,18 +10,24 @@ namespace Game.Game{
         private Canon[] _canons;
 
         void Start(){
-            _camera = FindObjectOfType<Camera>();
-            _canons = gameObject.GetComponentsInChildren<Canon>();
+            if (photonView.isMine){
+                _camera = FindObjectOfType<Camera>();
+                _canons = gameObject.GetComponentsInChildren<Canon>();
+            }
         }
 
         void Update(){
-            Movement();
-            Shoot();
+            if (photonView.isMine){
+                Movement();
+                Shoot();
+            }
         }
 
         // LateUpdate is called after Update each frame
         void LateUpdate(){
-            UpdateCamera();
+            if (photonView.isMine){
+                UpdateCamera();
+            }
         }
 
         private void UpdateCamera(){
@@ -42,7 +48,8 @@ namespace Game.Game{
         private void Shoot(){
             if (Input.GetButtonDown("Jump")){
                 foreach (Canon canon in _canons){
-                    GameManager.InstantiatePhoton("Actors/Effects/Weapons/Ammo", canon.transform, transform.parent.gameObject);
+                    GameManager.InstantiatePhoton("Actors/Effects/Weapons/Ammo", canon.transform,
+                        transform.parent.gameObject);
                 }
             }
         }

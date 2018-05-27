@@ -10,8 +10,8 @@ namespace Game{
         public GameObject GroupInstance;
         public Transform[] Positions;
 
-        [Tooltip("List prefabs name inside dir /Resources/Actors/ for instantiate online")]
-        public List<String> PrefabsList;
+        [Tooltip("List prefabs name inside dir /Resources/Actors/Players for instantiate online")]
+        public String PrefabsPlayerName;
 
         void Start(){
             DontDestroyOnLoad(gameObject);
@@ -24,16 +24,13 @@ namespace Game{
 
         void OnConnectedToMaster(){
             string room = (StaticClass.InfoObject != null) ? StaticClass.InfoObject.ToString() : "Marnintong-52";
-            PhotonNetwork.JoinOrCreateRoom(room, new RoomOptions{MaxPlayers = 10}, null);
+            PhotonNetwork.JoinOrCreateRoom(room, new RoomOptions{MaxPlayers = 100}, null);
         }
 
+/* Si es posible, mostrar en la parte superior o inferior el nombre de la galaxia a la que está conectado el usuario */
         void OnJoinedRoom(){
-//            GameObject obj = PhotonNetwork.InstantiatePhoton("Actors/Players/PlayerBlue", position.position, Quaternion.identity, 0);
-//            obj.transform.parent = GroupInstance.transform;
-            foreach (string prefabName in PrefabsList){
-                Transform position = Positions[GameManager.RandomBetween(0, Positions.Length - 1)];
-                GameManager.InstantiatePhoton("Actors/" + prefabName, position, GroupInstance);
-            }
+            Transform position = Positions[GameManager.RandomBetween(0, Positions.Length - 1)];
+            GameManager.InstantiatePhoton("Actors/Players/" + PrefabsPlayerName, position, GroupInstance);
         }
     }
 }
