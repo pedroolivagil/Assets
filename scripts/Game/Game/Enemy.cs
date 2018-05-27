@@ -20,7 +20,6 @@ namespace Game.Game{
 
         private float _dir = 0;
 
-//        private float _normalSpeed;
         private float _smoothTime = .3f;
 
         private float _currentTime = 0;

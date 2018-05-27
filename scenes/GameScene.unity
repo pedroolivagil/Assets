@@ -333,7 +333,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 76.390785
+  unpointedTime: 3.6168058
   disabled: 0
   activated: 0
   pressed: 0
@@ -647,7 +647,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 1081.4398
+  unpointedTime: 1115.2745
   disabled: 0
   activated: 0
   pressed: 0
@@ -4388,7 +4388,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 74580.766
+  unpointedTime: 74614.734
   disabled: 0
   activated: 0
   pressed: 0
@@ -4792,7 +4792,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 3396.5642
+  unpointedTime: 3430.3916
   disabled: 0
   activated: 0
   pressed: 0
@@ -5174,6 +5174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 865686045}
   - component: {fileID: 865686046}
+  - component: {fileID: 865686047}
   m_Layer: 0
   m_Name: WindowPlayer
   m_TagString: Untagged
@@ -5240,7 +5241,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 1097.2993
+  unpointedTime: 1131.134
   disabled: 0
   activated: 0
   pressed: 0
@@ -5353,6 +5354,19 @@ MonoBehaviour:
   closeButton: {fileID: 0}
   expandButton: {fileID: 0}
   minimizeButton: {fileID: 0}
+--- !u!114 &865686047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 865686044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ca8aef1c8a7e4409dc4bf0e7d06f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthBar: {fileID: 678673073}
+  ShieldBar: {fileID: 1914428820}
 --- !u!1 &911661523
 GameObject:
   m_ObjectHideFlags: 1
@@ -12827,7 +12841,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 76706.23
+  unpointedTime: 76740.195
   disabled: 0
   activated: 0
   pressed: 0
@@ -17156,7 +17170,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 66856.14
+  unpointedTime: 66890.11
   disabled: 0
   activated: 0
   pressed: 0
@@ -17712,7 +17726,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 75167.84
+  unpointedTime: 75201.81
   disabled: 0
   activated: 0
   pressed: 0
