@@ -37,6 +37,6 @@ public class Health : MonoBehaviour{
     }
 
     public int GetInitialShield(){
-        return _energy;
+        return _shield;
     }
 }

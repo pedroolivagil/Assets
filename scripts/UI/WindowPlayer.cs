@@ -23,6 +23,12 @@ namespace UI{
                 var playerShield = 100 / playerHp.GetInitialShield();
                 HealthBar.relative.right = playerEnergy * playerHp.Energy;
                 ShieldBar.relative.right = playerShield * playerHp.Shield;
+                if (playerHp.Energy <= 0){
+                    HealthBar.gameObject.SetActive(false);
+                }
+                if (playerHp.Shield <= 0){
+                    ShieldBar.gameObject.SetActive(false);
+                }
             }
         }
     }
