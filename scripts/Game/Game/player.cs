@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
+using MonoBehaviour = Photon.MonoBehaviour;
 
 namespace Game.Game{
-    public class Player : Photon.MonoBehaviour{
+    public class Player : MonoBehaviour{
         private Camera _camera;
         public float Speed = 3.0f;
         public float Rotate = 100f;
         public float ZoomCamera = -10f;
 
         private Canon[] _canons;
+        private Health _health;
 
         void Start(){
             if (photonView.isMine){
@@ -55,7 +57,7 @@ namespace Game.Game{
         }
 
         public void Death(){
-            
+            _health.Hit(Health.DEATH);
         }
     }
 }

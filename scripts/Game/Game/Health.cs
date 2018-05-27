@@ -8,6 +8,7 @@ public class Health : MonoBehaviour{
     private int _shield = 1;
 
     private float _rangeDecreaseBar;
+    public static int DEATH = -1;
 
     // Use this for initialization
     void Start(){
@@ -16,11 +17,22 @@ public class Health : MonoBehaviour{
         _shield = Shield;
     }
 
+    public void Hit(int damage){
+        Hit(damage, null);
+    }
+
     public void Hit(int damage, GameObject target){
-        for (int i = 0; i < damage; i++){
-            Refresh();
+        if (damage > DEATH){
+            for (int i = 0; i < damage; i++){
+                Refresh();
+            }
+        } else{
+            Energy = DEATH;
         }
-        if (Energy == 0){
+        if (target == null){
+            target = gameObject;
+        }
+        if (Energy <= 0){
             DestroyObject(target);
             GameManager.InstantiatePhoton("Actors/Effects/Explosions/Explosion", target.transform, null);
         }
