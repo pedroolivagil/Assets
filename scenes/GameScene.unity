@@ -156,6 +156,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &83587251
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,6 +200,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!4 &140831368 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4807235830588650, guid: fd5d7d5ce8142674c857bb9ca7b23dc0,
@@ -322,6 +324,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &279239738
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +368,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &300403107
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +412,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &335984436
 GameObject:
   m_ObjectHideFlags: 1
@@ -548,7 +553,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 15.327068
+  unpointedTime: 8.819017
   disabled: 0
   activated: 0
   pressed: 0
@@ -726,6 +731,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!21 &517803786
 Material:
   serializedVersion: 6
@@ -905,7 +911,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 2155.5034
+  unpointedTime: 2166.9807
   disabled: 0
   activated: 0
   pressed: 0
@@ -4504,6 +4510,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &577171724
 GameObject:
   m_ObjectHideFlags: 0
@@ -4689,7 +4696,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 75655.27
+  unpointedTime: 75666.81
   disabled: 0
   activated: 0
   pressed: 0
@@ -4836,6 +4843,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &639011102
 GameObject:
   m_ObjectHideFlags: 1
@@ -5136,7 +5144,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 4470.6313
+  unpointedTime: 4482.1123
   disabled: 0
   activated: 0
   pressed: 0
@@ -5281,6 +5289,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1001 &720283091
 Prefab:
   m_ObjectHideFlags: 0
@@ -5422,6 +5431,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1001 &797837755
 Prefab:
   m_ObjectHideFlags: 0
@@ -5610,6 +5620,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &854855036
 GameObject:
   m_ObjectHideFlags: 0
@@ -5714,7 +5725,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 961.3845
+  unpointedTime: 972.863
   disabled: 0
   activated: 0
   pressed: 0
@@ -9686,6 +9697,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &1040748304
 GameObject:
   m_ObjectHideFlags: 0
@@ -9729,6 +9741,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!4 &1065450235 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4807235830588650, guid: fd5d7d5ce8142674c857bb9ca7b23dc0,
@@ -9805,6 +9818,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &1202705268
 GameObject:
   m_ObjectHideFlags: 0
@@ -9876,6 +9890,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &1229149051
 GameObject:
   m_ObjectHideFlags: 0
@@ -9947,6 +9962,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &1322755627
 GameObject:
   m_ObjectHideFlags: 0
@@ -13580,7 +13596,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 77780.734
+  unpointedTime: 77792.27
   disabled: 0
   activated: 0
   pressed: 0
@@ -13772,6 +13788,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1001 &1356573703
 Prefab:
   m_ObjectHideFlags: 0
@@ -13896,6 +13913,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &1480502648
 GameObject:
   m_ObjectHideFlags: 0
@@ -14049,6 +14067,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &1548526727
 GameObject:
   m_ObjectHideFlags: 0
@@ -17960,6 +17979,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &1699916065
 GameObject:
   m_ObjectHideFlags: 1
@@ -18081,7 +18101,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 67930.65
+  unpointedTime: 67942.19
   disabled: 0
   activated: 0
   pressed: 0
@@ -18565,6 +18585,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &1913184072
 GameObject:
   m_ObjectHideFlags: 0
@@ -18681,7 +18702,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 76242.35
+  unpointedTime: 76253.89
   disabled: 0
   activated: 0
   pressed: 0
@@ -22389,6 +22410,7 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100
 --- !u!1 &2063789029
 GameObject:
   m_ObjectHideFlags: 1
@@ -22505,3 +22527,4 @@ MonoBehaviour:
   TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
+  MaxEnemyQuantity: 100

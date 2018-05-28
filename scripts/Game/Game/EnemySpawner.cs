@@ -5,10 +5,14 @@ using UnityEngine;
 namespace Game.Game{
     public class EnemySpawner : MonoBehaviour{
         public float TimeToRespawn = 30f;
-        [Tooltip("Number of enemies per spawn point to appears in game")]
+        [Tooltip("Number of enemies per spawn point to appears in game. Default: 3")]
         public int EnemyQuantity = 3;
-        [Tooltip("Maximum level that will have the enemies that will go through the spawn points")]
+
+        [Tooltip("Maximum level that will have the enemies that will go through the spawn points. Default: 3")]
         public int MaxEnemyLevel = 3;
+
+        [Tooltip("Number of enemies in current game. Default: 100")]
+        public int MaxEnemyQuantity = 100;
 
         private List<Transform> _spawners;
 
@@ -25,18 +29,19 @@ namespace Game.Game{
         }
 
         private IEnumerator Respawn(){
-            yield return new WaitForSeconds(TimeToRespawn);
             Debug.Log("EnemySpawner.Respawn() is IN.");
             foreach (var gob in _spawners){
                 for (int x = 0; x < EnemyQuantity; x++){
                     Debug.Log("Spawning enemy...");
-                    if (FindObjectsOfType<Player>().Length > 0){
+                    if (FindObjectsOfType<Player>().Length > 0 &&
+                        FindObjectsOfType<Enemy>().Length < MaxEnemyQuantity){
                         Debug.Log("Enemy spawned");
                         GameManager.InstantiatePhoton(RandomEnemy(), gob, gob.parent.gameObject);
                     }
                     yield return new WaitForSeconds(1f / 100f);
                 }
             }
+            yield return new WaitForSeconds(TimeToRespawn);
             yield return Respawn();
         }
 
