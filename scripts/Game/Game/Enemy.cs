@@ -57,7 +57,6 @@ namespace Game.Game{
                 _dir = Random.Range(-1.0f, 1.1f);
 //                _dir = GameManager.RandomBetween(-1, 1);
                 _directionTime = Time.time + GameManager.RandomBetween(2, 5);
-                Debug.Log("Dir: " + _dir);
             } else{
                 //pensar la forma de redireccionar la nave. actualmente no le da tiempo a girar;
 //                solo lo hace unos grados

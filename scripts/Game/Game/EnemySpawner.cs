@@ -25,23 +25,41 @@ namespace Game.Game{
         }
 
         private IEnumerator Respawn(){
+            yield return new WaitForSeconds(TimeToRespawn);
+            Debug.Log("EnemySpawner.Respawn() is IN.");
             foreach (var gob in _spawners){
                 for (int x = 0; x < EnemyQuantity; x++){
-                    Debug.Log("Enemy spawned");
-                    GameManager.InstantiatePhoton(RandomEnemy(), gob, gob.parent.gameObject);
+                    Debug.Log("Spawning enemy...");
+                    if (FindObjectsOfType<Player>().Length > 0){
+                        Debug.Log("Enemy spawned");
+                        GameManager.InstantiatePhoton(RandomEnemy(), gob, gob.parent.gameObject);
+                    }
                     yield return new WaitForSeconds(1f / 100f);
                 }
             }
-            yield return new WaitForSeconds(TimeToRespawn);
+            yield return Respawn();
         }
 
         private string RandomEnemy(){
             if (MaxEnemyLevel > 4){
                 MaxEnemyLevel = 4;
             }
-            string url = "Actors/Enemies/Type";
-            url += GameManager.RandomBetween(1, MaxEnemyLevel);
-            url += "/Enemy" + GameManager.RandomBetween(1, 4);
+            string url = "Actors/Enemies/Enemy";
+            switch (MaxEnemyLevel){
+                case 1:
+                    url += GameManager.RandomBetween(1, 4);
+                    break;
+                case 2:
+                    url += GameManager.RandomBetween(4, 8);
+                    break;
+                case 3:
+                    url += GameManager.RandomBetween(8, 12);
+                    break;
+                case 4:
+                    url += GameManager.RandomBetween(12, 16);
+                    break;
+            }
+            Debug.Log("EnemySpawned: " + url);
             return url;
         }
     }

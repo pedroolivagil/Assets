@@ -273,7 +273,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1392935671449372}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowHealthBar: 1
-  Speed: 3
+  Speed: 2
   Rotate: 100
   MinDist: 30
   RadiusDetectPlayer: 15
