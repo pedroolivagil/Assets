@@ -5,8 +5,8 @@ using UnityEngine;
 namespace Game.Game{
     public class EnemySpawner : MonoBehaviour{
         public float TimeToRespawn = 30f;
-        [Tooltip("Number of enemies per spawn point")] public int EnemyQuantity = 3;
-
+        [Tooltip("Number of enemies per spawn point to appears in game")]
+        public int EnemyQuantity = 3;
         [Tooltip("Maximum level that will have the enemies that will go through the spawn points")]
         public int MaxEnemyLevel = 3;
 
@@ -45,20 +45,7 @@ namespace Game.Game{
                 MaxEnemyLevel = 4;
             }
             string url = "Actors/Enemies/Enemy";
-            switch (MaxEnemyLevel){
-                case 1:
-                    url += GameManager.RandomBetween(1, 4);
-                    break;
-                case 2:
-                    url += GameManager.RandomBetween(4, 8);
-                    break;
-                case 3:
-                    url += GameManager.RandomBetween(8, 12);
-                    break;
-                case 4:
-                    url += GameManager.RandomBetween(12, 16);
-                    break;
-            }
+            url += GameManager.RandomBetween(1, 4 * MaxEnemyLevel);
             Debug.Log("EnemySpawned: " + url);
             return url;
         }

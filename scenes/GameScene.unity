@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &83587251
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!4 &140831368 stripped
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &279239738
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &300403107
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &335984436
@@ -548,7 +548,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 19.522419
+  unpointedTime: 15.327068
   disabled: 0
   activated: 0
   pressed: 0
@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!21 &517803786
@@ -905,7 +905,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 2131.2065
+  unpointedTime: 2155.5034
   disabled: 0
   activated: 0
   pressed: 0
@@ -4501,7 +4501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &577171724
@@ -4689,7 +4689,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 75630.945
+  unpointedTime: 75655.27
   disabled: 0
   activated: 0
   pressed: 0
@@ -4833,7 +4833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &639011102
@@ -5136,7 +5136,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 4446.3345
+  unpointedTime: 4470.6313
   disabled: 0
   activated: 0
   pressed: 0
@@ -5278,7 +5278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1001 &720283091
@@ -5419,7 +5419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1001 &797837755
@@ -5607,7 +5607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &854855036
@@ -5714,7 +5714,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 937.0874
+  unpointedTime: 961.3845
   disabled: 0
   activated: 0
   pressed: 0
@@ -9683,7 +9683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &1040748304
@@ -9726,7 +9726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!4 &1065450235 stripped
@@ -9802,7 +9802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &1202705268
@@ -9873,7 +9873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &1229149051
@@ -9944,7 +9944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &1322755627
@@ -13580,7 +13580,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 77756.41
+  unpointedTime: 77780.734
   disabled: 0
   activated: 0
   pressed: 0
@@ -13769,7 +13769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1001 &1356573703
@@ -13893,7 +13893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &1480502648
@@ -14046,7 +14046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &1548526727
@@ -17957,7 +17957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &1699916065
@@ -18081,7 +18081,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 67906.32
+  unpointedTime: 67930.65
   disabled: 0
   activated: 0
   pressed: 0
@@ -18562,7 +18562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &1913184072
@@ -18681,7 +18681,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 76218.02
+  unpointedTime: 76242.35
   disabled: 0
   activated: 0
   pressed: 0
@@ -22386,7 +22386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
 --- !u!1 &2063789029
@@ -22502,6 +22502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8caf86be0c9ff4896a9f74af007b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 30
   EnemyQuantity: 3
   MaxEnemyLevel: 3
