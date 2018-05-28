@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Game.Game{
     public class EnemySpawner : MonoBehaviour{
         public float TimeToRespawn = 30f;
-        [Tooltip("Number of enemies per spawn point to appears in game. Default: 3")]
+        [Tooltip("Number of enemies per spawn point to appears in game. Default: 3")] 
         public int EnemyQuantity = 3;
 
         [Tooltip("Maximum level that will have the enemies that will go through the spawn points. Default: 3")]
