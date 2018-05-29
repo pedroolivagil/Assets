@@ -15,6 +15,7 @@ namespace Game.Game{
             if (photonView.isMine){
                 _camera = FindObjectOfType<Camera>();
                 _canons = gameObject.GetComponentsInChildren<Canon>();
+                _health = gameObject.GetComponentInChildren<Health>();
             }
         }
 
@@ -48,7 +49,8 @@ namespace Game.Game{
         }
 
         private void Shoot(){
-            if (Input.GetButtonDown("Jump")){
+            var shieldActive = GetComponentInChildren<Shield>(true).gameObject.GetActive();
+            if (Input.GetButtonDown("Jump") && !shieldActive){
                 foreach (Canon canon in _canons){
                     GameManager.InstantiatePhoton("Actors/Effects/Weapons/Bullet", canon.transform,
                         transform.parent.gameObject);
@@ -60,12 +62,17 @@ namespace Game.Game{
             _health.Hit(Health.DEATH);
         }
 
-        void OnTriggerEnter(Collider other){
-            if (other.CompareTag(Tag.Ammo.ToString())){
-                Ammo bullet = other.GetComponent<Ammo>();
-                _health.Hit(bullet.Damage, gameObject);
-            }
-            DestroyObject(gameObject);
-        }
+//        void OnTriggerEnter(Collider other){
+//            if (other.CompareTag(Tag.Ammo.ToString())){
+//                Debug.Log("PlayerCollider: " + other.tag);
+//                Ammo bullet = other.GetComponent<Ammo>();
+//                Debug.Log("AMMO: " + bullet);
+//                if (bullet != null && _health != null){
+//                    Debug.Log("Hit player");
+//                    _health.Hit(bullet.Damage, gameObject);
+//                }
+//                DestroyObject(other);
+//            }
+//        }
     }
 }

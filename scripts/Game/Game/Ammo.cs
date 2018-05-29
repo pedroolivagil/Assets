@@ -17,12 +17,19 @@ namespace Game.Game{
             transform.Translate(x, y, 0);
         }
 
-//        void OnTriggerEnter(Collider other){
-//            if (other.tag.Equals(Tag.Enemy.ToString()) || other.tag.Equals(Tag.Player.ToString())){
-//                Health health = other.GetComponentInChildren<Health>();
-//                health.Hit(Damage, other.gameObject);
-//            }
-//            DestroyObject(gameObject);
-//        }
+        void OnTriggerEnter(Collider other){
+            if (other.CompareTag(Tag.Player.ToString())){
+                Debug.Log("AmmoCollider: " + other.tag);
+                Shield shield = other.GetComponentInChildren<Shield>(true);
+                if (!shield.gameObject.GetActive()){
+                    Health health = other.GetComponent<Health>();
+                    Debug.Log("Hit player");
+                    health.Hit(Damage);
+                } else{
+                    shield.Hit(Damage);
+                }
+            }
+            DestroyObject(gameObject);
+        }
     }
 }

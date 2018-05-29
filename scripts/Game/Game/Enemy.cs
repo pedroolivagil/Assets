@@ -103,7 +103,7 @@ namespace Game.Game{
         }
 
         void OnTriggerEnter(Collider other){
-            if (other.tag.Equals(Tag.Player.ToString())){
+            if (other.CompareTag(Tag.Player.ToString())){
                 PlayerDetected = true;
             }
 //            if (other.tag.Equals(Tag.Enemy.ToString()) && Time.time > _directionTime){
@@ -112,19 +112,21 @@ namespace Game.Game{
 //            }
             if (other.CompareTag(Tag.Ammo.ToString())){
                 Ammo bullet = other.GetComponent<Ammo>();
-                _healthBar.Hit(bullet.Damage, gameObject);
+                if (bullet != null && _healthBar != null){
+                    _healthBar.Hit(bullet.Damage, gameObject);
+                }
+                DestroyObject(other);
             }
-            DestroyObject(gameObject);
         }
 
         void OnTriggerStay(Collider other){
-            if (other.tag.Equals(Tag.Player.ToString())){
+            if (other.CompareTag(Tag.Player.ToString())){
                 Shoot();
             }
         }
 
         void OnTriggerExit(Collider other){
-            if (other.tag.Equals(Tag.Player.ToString())){
+            if (other.CompareTag(Tag.Player.ToString())){
                 PlayerDetected = false;
             }
         }

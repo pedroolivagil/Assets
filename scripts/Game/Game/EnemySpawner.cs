@@ -29,13 +29,13 @@ namespace Game.Game{
         }
 
         private IEnumerator Respawn(){
-            Debug.Log("EnemySpawner.Respawn() is IN.");
+//            Debug.Log("EnemySpawner.Respawn() is IN.");
             foreach (var gob in _spawners){
                 for (int x = 0; x < EnemyQuantity; x++){
-                    Debug.Log("Spawning enemy...");
+//                    Debug.Log("Spawning enemy...");
                     if (FindObjectsOfType<Player>().Length > 0 &&
                         FindObjectsOfType<Enemy>().Length < MaxEnemyQuantity){
-                        Debug.Log("Enemy spawned");
+//                        Debug.Log("Enemy spawned");
                         GameManager.InstantiatePhoton(RandomEnemy(), gob, gob.parent.gameObject);
                     }
                     yield return new WaitForSeconds(1f / 100f);
@@ -51,7 +51,7 @@ namespace Game.Game{
             }
             string url = "Actors/Enemies/Enemy";
             url += GameManager.RandomBetween(1, 4 * MaxEnemyLevel);
-            Debug.Log("EnemySpawned: " + url);
+//            Debug.Log("EnemySpawned: " + url);
             return url;
         }
     }

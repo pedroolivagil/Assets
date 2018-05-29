@@ -22,14 +22,17 @@ namespace UI{
             if (_player != null && _player.photonView.isMine){
                 var playerHp = _player.GetComponent<Health>();
                 var playerEnergy = 100 / playerHp.GetInitialEnergy();
-                var playerShield = 100 / playerHp.GetInitialShield();
                 HealthBar.relative.right = playerEnergy * playerHp.Energy;
-                ShieldBar.relative.right = playerShield * playerHp.Shield;
                 if (playerHp.Energy <= 0){
                     HealthBar.gameObject.SetActive(false);
                 }
-                if (playerHp.Shield <= 0){
+                var playerSh = _player.GetComponentInChildren<Shield>(true);
+                var playerShield = 100 / playerSh.GetInitialShield();
+                ShieldBar.relative.right = playerShield * playerSh.Energy;
+                if (playerSh.Energy <= 0){
                     ShieldBar.gameObject.SetActive(false);
+                } else{
+                    ShieldBar.gameObject.SetActive(true);
                 }
             }
         }
