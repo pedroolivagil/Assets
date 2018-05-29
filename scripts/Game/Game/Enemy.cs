@@ -110,6 +110,11 @@ namespace Game.Game{
 //                _dir = _dir * -1;
 //                _directionTime = Time.time + GameManager.RandomBetween(5, 15);
 //            }
+            if (other.CompareTag(Tag.Ammo.ToString())){
+                Ammo bullet = other.GetComponent<Ammo>();
+                _healthBar.Hit(bullet.Damage, gameObject);
+            }
+            DestroyObject(gameObject);
         }
 
         void OnTriggerStay(Collider other){

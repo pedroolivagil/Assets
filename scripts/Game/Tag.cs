@@ -2,6 +2,7 @@
     public enum Tag{
         Player,
         Enemy,
-        EnemySpawner
+        EnemySpawner,
+        Ammo
     }
 }

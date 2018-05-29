@@ -59,5 +59,13 @@ namespace Game.Game{
         public void Death(){
             _health.Hit(Health.DEATH);
         }
+
+        void OnTriggerEnter(Collider other){
+            if (other.CompareTag(Tag.Ammo.ToString())){
+                Ammo bullet = other.GetComponent<Ammo>();
+                _health.Hit(bullet.Damage, gameObject);
+            }
+            DestroyObject(gameObject);
+        }
     }
 }
