@@ -50,7 +50,7 @@ namespace Game.Game{
         private void Shoot(){
             if (Input.GetButtonDown("Jump")){
                 foreach (Canon canon in _canons){
-                    GameManager.InstantiatePhoton("Actors/Effects/Weapons/Ammo", canon.transform,
+                    GameManager.InstantiatePhoton("Actors/Effects/Weapons/Bullet", canon.transform,
                         transform.parent.gameObject);
                 }
             }

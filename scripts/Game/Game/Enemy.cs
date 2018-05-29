@@ -95,7 +95,7 @@ namespace Game.Game{
         private void Shoot(){
             if (Time.time > _currentTime && _targetPlayer != null && PlayerDetected){
                 foreach (Canon canon in _canons){
-                    GameManager.InstantiatePhoton("Actors/Effects/Weapons/Ammo", canon.transform,
+                    GameManager.InstantiatePhoton("Actors/Effects/Weapons/Bullet", canon.transform,
                         gameObject.gameObject);
                     _currentTime = Time.time + TimeShooting;
                 }
