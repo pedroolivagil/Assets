@@ -10,12 +10,14 @@ namespace Game.Game{
 
         private Canon[] _canons;
         private Health _health;
+        private Shield _shield;
 
         void Start(){
             if (photonView.isMine){
                 _camera = FindObjectOfType<Camera>();
                 _canons = gameObject.GetComponentsInChildren<Canon>();
                 _health = gameObject.GetComponentInChildren<Health>();
+                _shield = gameObject.GetComponentInChildren<Shield>(true);
             }
         }
 
@@ -23,6 +25,7 @@ namespace Game.Game{
             if (photonView.isMine){
                 Movement();
                 Shoot();
+                Controllers();
             }
         }
 
@@ -49,7 +52,7 @@ namespace Game.Game{
         }
 
         private void Shoot(){
-            var shieldActive = GetComponentInChildren<Shield>(true).gameObject.GetActive();
+            var shieldActive = _shield.gameObject.GetActive();
             if (Input.GetButtonDown("Jump") && !shieldActive){
                 foreach (Canon canon in _canons){
                     GameManager.InstantiatePhoton("Actors/Effects/Weapons/Bullet", canon.transform,
@@ -74,5 +77,12 @@ namespace Game.Game{
 //                DestroyObject(other);
 //            }
 //        }
+        private void Controllers(){
+            if (Input.GetButton("Fire2")){
+                _shield.OpenShield(true);
+            } else{
+                _shield.OpenShield(false);
+            }
+        }
     }
 }

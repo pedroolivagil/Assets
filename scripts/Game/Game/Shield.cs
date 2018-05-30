@@ -7,8 +7,8 @@ namespace Game.Game{
 
         void Start(){
             _energy = Energy;
+            transform.localScale = Vector3.zero;
         }
-
 
         public void Hit(int damage){
             Hit(damage, gameObject);
@@ -24,9 +24,24 @@ namespace Game.Game{
             }
         }
 
-
         public int GetInitialShield(){
             return _energy;
+        }
+
+        public void OpenShield(bool active){
+            Vector3 originalScale = transform.localScale;
+            Vector3 newScale;
+            if (active){
+                newScale = new Vector3(8, 8, 1);
+            } else{
+                newScale = Vector3.zero;
+            }
+            float currentTime = 0.0f;
+            float time = 3f;
+            do{
+                transform.localScale = Vector3.Lerp(originalScale, newScale, currentTime / time);
+                currentTime += Time.deltaTime;
+            } while (currentTime <= time);
         }
     }
 }

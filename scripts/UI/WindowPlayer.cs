@@ -1,5 +1,6 @@
 ﻿using Game.Game;
-using Photon;
+using UnityEngine;
+using MonoBehaviour = Photon.MonoBehaviour;
 
 namespace UI{
     public class WindowPlayer : MonoBehaviour{
@@ -21,18 +22,25 @@ namespace UI{
         private void UpdateInfo(){
             if (_player != null && _player.photonView.isMine){
                 var playerHp = _player.GetComponent<Health>();
-                var playerEnergy = 100 / playerHp.GetInitialEnergy();
-                HealthBar.relative.right = playerEnergy * playerHp.Energy;
                 if (playerHp.Energy <= 0){
                     HealthBar.gameObject.SetActive(false);
+                } else{
+                    var playerEnergy = 100 / playerHp.GetInitialEnergy();
+                    HealthBar.relative.right = playerEnergy * playerHp.Energy;
                 }
                 var playerSh = _player.GetComponentInChildren<Shield>(true);
-                var playerShield = 100 / playerSh.GetInitialShield();
-                ShieldBar.relative.right = playerShield * playerSh.Energy;
-                if (playerSh.Energy <= 0){
+                if (!playerSh.gameObject.GetActive()){
                     ShieldBar.gameObject.SetActive(false);
                 } else{
-                    ShieldBar.gameObject.SetActive(true);
+                    if (playerSh.Energy <= 0){
+                        ShieldBar.gameObject.SetActive(false);
+                    } else{
+                        var playerShield = 100 / playerSh.GetInitialShield();
+                        Debug.Log("ShieldLifePart: " + playerShield);
+                        Debug.Log("ShieldLife: " + playerSh.Energy);
+                        ShieldBar.relative.right = playerShield * playerSh.Energy;
+                        ShieldBar.gameObject.SetActive(true);
+                    }
                 }
             }
         }
